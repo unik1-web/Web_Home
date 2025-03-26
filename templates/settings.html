@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Настройки</h2>
+    <form method="POST" action="{{ url_for('save_settings') }}">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-4">Настройки модулей</h5>
+                
+                <!-- Database Settings -->
+                <div class="mb-3">
+                    <label for="db_path" class="form-label">База данных:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="db_path" name="db_path" 
+                               value="{{ config.get('db_path', '') }}">
+                        <button class="btn btn-outline-secondary" type="button" id="browse_db" data-action="select-db">...</button>
+                    </div>
+                </div>
+
+                <!-- Weight Format -->
+                <div class="mb-3">
+                    <label for="weight_format" class="form-label">Формат веса:</label>
+                    <select class="form-select" id="weight_format" name="weight_format">
+                        <option value="#." {% if config.get('weight_format') == '#.' %}selected{% endif %}>Без знаков</option>
+                        <option value="#.#" {% if config.get('weight_format') == '#.#' %}selected{% endif %}>Один знак</option>
+                        <option value="#.##" {% if config.get('weight_format') == '#.##' %}selected{% endif %}>Два знака</option>
+                    </select>
+                </div>
+
+                <!-- Date Format -->
+                <div class="mb-3">
+                    <label for="date_format" class="form-label">Формат даты и времени:</label>
+                    <select class="form-select" id="date_format" name="date_format">
+                        <option value="%Y-%m-%d %H:%M:%S" {% if config.get('date_format') == '%Y-%m-%d %H:%M:%S' %}selected{% endif %}>YYYY-MM-DD HH:MM:SS</option>
+                        <option value="%d.%m.%Y %H:%M:%S" {% if config.get('date_format') == '%d.%m.%Y %H:%M:%S' %}selected{% endif %}>DD.MM.YYYY HH:MM:SS</option>
+                        <option value="%Y/%m/%d %H:%M:%S" {% if config.get('date_format') == '%Y/%m/%d %H:%M:%S' %}selected{% endif %}>YYYY/MM/DD HH:MM:SS</option>
+                    </select>
+                </div>
+
+                <!-- Access Key -->
+                <div class="mb-3">
+                    <label for="access_key" class="form-label">Ключ доступа:</label>
+                    <input type="password" class="form-control" id="access_key" name="access_key" 
+                           value="{{ config.get('access_key', '') }}">
+                </div>
+
+                <!-- Object Settings -->
+                <div class="mb-3">
+                    <label for="object_id1" class="form-label">Идентификатор объекта 1:</label>
+                    <input type="text" class="form-control" id="object_id1" name="object_id1" 
+                           value="{{ config.get('object_id1', '') }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="object_name1" class="form-label">Наименование объекта 1:</label>
+                    <input type="text" class="form-control" id="object_name1" name="object_name1" 
+                           value="{{ config.get('object_name1', 'Объект обработки TKO, г. Бузулук') }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="object_id2" class="form-label">Идентификатор объекта 2:</label>
+                    <input type="text" class="form-control" id="object_id2" name="object_id2" 
+                           value="{{ config.get('object_id2', '') }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="object_name2" class="form-label">Наименование объекта 2:</label>
+                    <input type="text" class="form-control" id="object_name2" name="object_name2" 
+                           value="{{ config.get('object_name2', 'Полигон ТБО, г. Бузулук') }}">
+                </div>
+
+                <!-- Service URL -->
+                <div class="mb-3">
+                    <label for="object_url" class="form-label">Адрес сервиса:</label>
+                    <input type="text" class="form-control" id="object_url" name="object_url" 
+                           value="{{ config.get('object_url', 'https://httpbin.org/post') }}">
+                </div>
+
+                <!-- Font Settings -->
+                <div class="mb-3">
+                    <label for="font_family" class="form-label">Шрифт:</label>
+                    <select class="form-select" id="font_family" name="font_family">
+                        <option value="Arial" {% if config.get('font_family') == 'Arial' %}selected{% endif %}>Arial</option>
+                        <option value="Times New Roman" {% if config.get('font_family') == 'Times New Roman' %}selected{% endif %}>Times New Roman</option>
+                        <option value="Courier New" {% if config.get('font_family') == 'Courier New' %}selected{% endif %}>Courier New</option>
+                        <option value="Verdana" {% if config.get('font_family') == 'Verdana' %}selected{% endif %}>Verdana</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="font_size" class="form-label">Размер шрифта:</label>
+                    <select class="form-select" id="font_size" name="font_size">
+                        {% for size in [8, 9, 10, 11, 12, 14, 16] %}
+                        <option value="{{ size }}" {% if config.get('font_size')|int == size %}selected{% endif %}>{{ size }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='/'">Отмена</button>
+            <button type="button" class="btn btn-info" id="check_db" data-action="check-db">Проверка БД</button>
+            <button type="button" class="btn btn-info" id="check_reo" data-action="check-reo">Проверка РЭО</button>
+        </div>
+    </form>
+</div>
+{% endblock %} 

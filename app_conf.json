@@ -1,0 +1,16 @@
+{
+    "db_path": "C:/Program Files (x86)/Vescom/VESYEVENT.GDB",
+    "weight_format": "#.",
+    "date_format": "%Y-%m-%d %H:%M:%S",
+    "access_key": "b9bf3466-d3a8-4621-aade-bcff5099eca9",
+    "object_name": null,
+    "object_id": null,
+    "service_url": null,
+    "font_size": "10",
+    "object_name1": "Объект обработки TKO, г. Бузулук",
+    "object_id1": "",
+    "object_name2": "Полигон ТБО, г. Бузулук",
+    "object_id2": "",
+    "object_url": "https://httpbin.org/post",
+    "font_family": "Arial"
+}

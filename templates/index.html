@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Date Navigation -->
+    <div class="row mb-3 mt-3">
+        <div class="col">
+            <div class="btn-group">
+                <button class="btn btn-outline-primary" id="prevDate">
+                    <i class="fas fa-chevron-left"></i> Назад
+                </button>
+                <button class="btn btn-outline-primary" id="calendarToggle">
+                    {{ current_date }}
+                </button>
+                <button class="btn btn-outline-primary" id="nextDate">
+                    Вперед <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div id="calendar" style="display: none;"></div>
+            <input type="hidden" id="current_date" value="{{ current_date }}">
+        </div>
+        <div class="col text-end">
+            <button class="btn btn-primary" id="sendToReo">
+                <i class="fas fa-paper-plane"></i> Отправить в РЭО
+            </button>
+            <button class="btn btn-secondary" id="refresh">
+                <i class="fas fa-sync"></i> Обновить
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Table -->
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAll"></th>
+                    <th>Дата провески брутто</th>
+                    <th>Дата провески тары</th>
+                    <th>№ авто</th>
+                    <th>Марка авто</th>
+                    <th>Отправитель</th>
+                    <th>ИНН</th>
+                    <th>КПП</th>
+                    <th>Брутто</th>
+                    <th>Тара</th>
+                    <th>Нетто</th>
+                    <th>Род груза</th>
+                    <th>Статус отправки объекта 1</th>
+                    <th>Статус отправки объекта 2</th>
+                    <th>Дата отправки</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td><input type="checkbox" name="row_select" value="{{ loop.index0 }}"></td>
+                    <td>{{ row.data[0] }}</td>
+                    <td>{{ row.data[1] }}</td>
+                    <td>{{ row.data[2] }}</td>
+                    <td>{{ row.data[3] }}</td>
+                    <td>{{ row.data[4] }}</td>
+                    <td>{{ row.inn }}</td>
+                    <td>{{ row.kpp }}</td>
+                    <td class="text-end">{{ row.data[5] }}</td>
+                    <td class="text-end">{{ row.data[6] }}</td>
+                    <td class="text-end">{{ row.data[7] }}</td>
+                    <td>{{ row.data[8] }}</td>
+                    <td>{{ row.status1 }}</td>
+                    <td>{{ row.status2 }}</td>
+                    <td>{{ row.send_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- JavaScript for table functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Select All functionality
+    const selectAllCheckbox = document.getElementById('selectAll');
+    if (selectAllCheckbox) {
+        selectAllCheckbox.addEventListener('change', function() {
+            document.querySelectorAll('input[name="row_select"]')
+                .forEach(checkbox => checkbox.checked = this.checked);
+        });
+    }
+
+    // Date navigation
+    const currentDateInput = document.getElementById('current_date');
+    const prevDateBtn = document.getElementById('prevDate');
+    const nextDateBtn = document.getElementById('nextDate');
+
+    if (currentDateInput) {
+        currentDateInput.addEventListener('change', function() {
+            window.location.href = '/?date=' + this.value;
+        });
+    }
+
+    if (prevDateBtn) {
+        prevDateBtn.addEventListener('click', function() {
+            const date = new Date(currentDateInput.value);
+            date.setDate(date.getDate() - 1);
+            currentDateInput.value = date.toISOString().split('T')[0];
+            window.location.href = '/?date=' + currentDateInput.value;
+        });
+    }
+
+    if (nextDateBtn) {
+        nextDateBtn.addEventListener('click', function() {
+            const date = new Date(currentDateInput.value);
+            date.setDate(date.getDate() + 1);
+            currentDateInput.value = date.toISOString().split('T')[0];
+            window.location.href = '/?date=' + currentDateInput.value;
+        });
+    }
+});
+</script>
+{% endblock %} 

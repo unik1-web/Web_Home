@@ -1,0 +1,953 @@
+2025-03-27 02:44:08,779 - INFO - Program started
+2025-03-27 02:44:08,779 - INFO - Starting check of required files
+2025-03-27 02:44:08,780 - INFO - Settings file app_conf.json not found. Creating new file with default settings.
+2025-03-27 02:44:08,780 - INFO - Settings file successfully created
+2025-03-27 02:44:08,789 - INFO - Settings loaded
+2025-03-27 02:44:08,789 - WARNING - Database app_data.sqlite is missing
+2025-03-27 02:44:08,789 - INFO - Starting creation of new database app_data.sqlite
+2025-03-27 02:44:09,054 - INFO - Database app_data.sqlite successfully created with the following tables:
+2025-03-27 02:44:09,054 - INFO - - new_auto_go (weighing data)
+2025-03-27 02:44:09,054 - INFO - - list_auto (vehicle list)
+2025-03-27 02:44:09,055 - INFO - - list_cargotypes (cargo types)
+2025-03-27 02:44:09,055 - INFO - - list_companies (company list)
+2025-03-27 02:44:09,055 - INFO - - auto_uid (weighing identifiers)
+2025-03-27 02:44:09,055 - INFO - - reo_data (REO data)
+2025-03-27 02:44:09,055 - INFO - - auto_go (weighing archive)
+2025-03-27 02:44:09,128 - INFO - Successfully connected to database C:\VESYEVENT.GDB
+2025-03-27 02:44:09,587 - INFO - Successfully connected to REO service
+2025-03-27 02:44:09,587 - INFO - Log file app.log found
+2025-03-27 02:44:09,588 - INFO - Required files check completed
+2025-03-27 02:44:20,318 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 02:44:34,752 - INFO - Program termination requested by user
+2025-03-27 02:44:34,752 - INFO - Program termination
+2025-03-27 02:45:20,597 - INFO - Program started
+2025-03-27 02:45:20,597 - INFO - Starting check of required files
+2025-03-27 02:45:20,597 - INFO - Settings file app_conf.json found
+2025-03-27 02:45:20,599 - INFO - Settings loaded
+2025-03-27 02:45:20,599 - INFO - Database app_data.sqlite found
+2025-03-27 02:45:20,688 - INFO - Successfully connected to database C:/Program Files (x86)/Vescom/VESYEVENT.GDB
+2025-03-27 02:45:21,086 - INFO - Successfully connected to REO service
+2025-03-27 02:45:21,086 - INFO - Log file app.log found
+2025-03-27 02:45:21,086 - INFO - Required files check completed
+2025-03-27 02:45:30,343 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 02:45:39,790 - INFO - Program termination requested by user
+2025-03-27 02:45:39,791 - INFO - Program termination
+2025-03-27 03:03:03,577 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:03:03,577 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:03:03,580 - INFO -  * Restarting with stat
+2025-03-27 03:03:03,937 - WARNING -  * Debugger is active!
+2025-03-27 03:03:03,941 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:03:26,164 - INFO - 127.0.0.1 - - [27/Mar/2025 03:03:26] "[35m[1mGET /settings HTTP/1.1[0m" 500 -
+2025-03-27 03:03:26,259 - INFO - 127.0.0.1 - - [27/Mar/2025 03:03:26] "GET /settings?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-27 03:03:26,259 - INFO - 127.0.0.1 - - [27/Mar/2025 03:03:26] "GET /settings?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-27 03:03:26,274 - INFO - 127.0.0.1 - - [27/Mar/2025 03:03:26] "GET /settings?__debugger__=yes&cmd=resource&f=console.png&s=3EZI7Wa0lRFbzYLcv7Pk HTTP/1.1" 200 -
+2025-03-27 03:03:26,322 - INFO - 127.0.0.1 - - [27/Mar/2025 03:03:26] "GET /settings?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-27 03:06:08,592 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:06:08,593 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:06:08,594 - INFO -  * Restarting with stat
+2025-03-27 03:06:08,937 - WARNING -  * Debugger is active!
+2025-03-27 03:06:08,943 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:06:14,532 - INFO - Data successfully loaded from database for date: 2025-03-27
+2025-03-27 03:06:14,547 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:14] "GET / HTTP/1.1" 200 -
+2025-03-27 03:06:14,617 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:14] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-27 03:06:14,635 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:14] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-27 03:06:30,915 - INFO - Data successfully loaded from database for date: 2025-03-26
+2025-03-27 03:06:30,916 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:30] "GET /?date=2025-03-26 HTTP/1.1" 200 -
+2025-03-27 03:06:30,930 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:06:30,932 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:06:31,835 - INFO - Data successfully loaded from database for date: 2025-03-25
+2025-03-27 03:06:31,836 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:31] "GET /?date=2025-03-25 HTTP/1.1" 200 -
+2025-03-27 03:06:31,861 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:06:31,861 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:06:32,375 - INFO - Data successfully loaded from database for date: 2025-03-24
+2025-03-27 03:06:32,377 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:32] "GET /?date=2025-03-24 HTTP/1.1" 200 -
+2025-03-27 03:06:32,388 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:06:32,389 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:06:32,581 - INFO - Data successfully loaded from database for date: 2025-03-23
+2025-03-27 03:06:32,582 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:32] "GET /?date=2025-03-23 HTTP/1.1" 200 -
+2025-03-27 03:06:32,595 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:06:32,595 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:06:34,212 - INFO - Data successfully loaded from database for date: 2025-03-24
+2025-03-27 03:06:34,213 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:34] "GET /?date=2025-03-24 HTTP/1.1" 200 -
+2025-03-27 03:06:34,224 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:06:34,225 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:06:35,918 - INFO - Data successfully loaded from database for date: 2025-03-25
+2025-03-27 03:06:35,919 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:35] "GET /?date=2025-03-25 HTTP/1.1" 200 -
+2025-03-27 03:06:35,931 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:06:35,931 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:06:43,990 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:43] "[33mPOST /send_to_reo HTTP/1.1[0m" 404 -
+2025-03-27 03:06:56,119 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:56] "[35m[1mGET /settings HTTP/1.1[0m" 500 -
+2025-03-27 03:06:56,133 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:56] "[36mGET /settings?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:06:56,133 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:56] "[36mGET /settings?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-27 03:06:56,145 - INFO - 127.0.0.1 - - [27/Mar/2025 03:06:56] "GET /settings?__debugger__=yes&cmd=resource&f=console.png&s=J0BRdpaRZO6MSZLissbs HTTP/1.1" 200 -
+2025-03-27 03:07:11,499 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:11] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-27 03:07:11,510 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:07:11,511 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:07:24,870 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:24] "GET /companies HTTP/1.1" 200 -
+2025-03-27 03:07:24,884 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:07:24,885 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:07:31,992 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:31] "GET /auto HTTP/1.1" 200 -
+2025-03-27 03:07:32,005 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:07:32,005 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:07:59,681 - INFO - Data successfully loaded from database for date: 2025-03-24
+2025-03-27 03:07:59,682 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:59] "GET /?date=2025-03-24 HTTP/1.1" 200 -
+2025-03-27 03:07:59,695 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:07:59,695 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:07:59,898 - INFO - Data successfully loaded from database for date: 2025-03-23
+2025-03-27 03:07:59,900 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:59] "GET /?date=2025-03-23 HTTP/1.1" 200 -
+2025-03-27 03:07:59,926 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:07:59,927 - INFO - 127.0.0.1 - - [27/Mar/2025 03:07:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:00,257 - INFO - Data successfully loaded from database for date: 2025-03-22
+2025-03-27 03:08:00,259 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "GET /?date=2025-03-22 HTTP/1.1" 200 -
+2025-03-27 03:08:00,283 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:00,284 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:00,609 - INFO - Data successfully loaded from database for date: 2025-03-21
+2025-03-27 03:08:00,611 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "GET /?date=2025-03-21 HTTP/1.1" 200 -
+2025-03-27 03:08:00,622 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:00,625 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:00,799 - INFO - Data successfully loaded from database for date: 2025-03-20
+2025-03-27 03:08:00,800 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "GET /?date=2025-03-20 HTTP/1.1" 200 -
+2025-03-27 03:08:00,812 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:00,813 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:01,183 - INFO - Data successfully loaded from database for date: 2025-03-19
+2025-03-27 03:08:01,185 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "GET /?date=2025-03-19 HTTP/1.1" 200 -
+2025-03-27 03:08:01,196 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:01,197 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:01,501 - INFO - Data successfully loaded from database for date: 2025-03-18
+2025-03-27 03:08:01,502 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "GET /?date=2025-03-18 HTTP/1.1" 200 -
+2025-03-27 03:08:01,514 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:01,515 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:01,834 - INFO - Data successfully loaded from database for date: 2025-03-17
+2025-03-27 03:08:01,835 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "GET /?date=2025-03-17 HTTP/1.1" 200 -
+2025-03-27 03:08:01,847 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:01,848 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:02,198 - INFO - Data successfully loaded from database for date: 2025-03-16
+2025-03-27 03:08:02,199 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "GET /?date=2025-03-16 HTTP/1.1" 200 -
+2025-03-27 03:08:02,211 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:02,212 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:02,596 - INFO - Data successfully loaded from database for date: 2025-03-15
+2025-03-27 03:08:02,597 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "GET /?date=2025-03-15 HTTP/1.1" 200 -
+2025-03-27 03:08:02,625 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:02,626 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:02,893 - INFO - Data successfully loaded from database for date: 2025-03-14
+2025-03-27 03:08:02,894 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "GET /?date=2025-03-14 HTTP/1.1" 200 -
+2025-03-27 03:08:02,904 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:02,905 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:03,137 - INFO - Data successfully loaded from database for date: 2025-03-13
+2025-03-27 03:08:03,138 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "GET /?date=2025-03-13 HTTP/1.1" 200 -
+2025-03-27 03:08:03,150 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:03,151 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:03,526 - INFO - Data successfully loaded from database for date: 2025-03-12
+2025-03-27 03:08:03,527 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "GET /?date=2025-03-12 HTTP/1.1" 200 -
+2025-03-27 03:08:03,540 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:03,542 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:03,891 - INFO - Data successfully loaded from database for date: 2025-03-11
+2025-03-27 03:08:03,892 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "GET /?date=2025-03-11 HTTP/1.1" 200 -
+2025-03-27 03:08:03,910 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:03,911 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:04,353 - INFO - Data successfully loaded from database for date: 2025-03-10
+2025-03-27 03:08:04,354 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "GET /?date=2025-03-10 HTTP/1.1" 200 -
+2025-03-27 03:08:04,367 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:04,368 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:04,704 - INFO - Data successfully loaded from database for date: 2025-03-09
+2025-03-27 03:08:04,707 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "GET /?date=2025-03-09 HTTP/1.1" 200 -
+2025-03-27 03:08:04,719 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:04,719 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:04,978 - INFO - Data successfully loaded from database for date: 2025-03-08
+2025-03-27 03:08:04,979 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "GET /?date=2025-03-08 HTTP/1.1" 200 -
+2025-03-27 03:08:04,991 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:04,993 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:05,179 - INFO - Data successfully loaded from database for date: 2025-03-07
+2025-03-27 03:08:05,181 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "GET /?date=2025-03-07 HTTP/1.1" 200 -
+2025-03-27 03:08:05,194 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:05,195 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:05,518 - INFO - Data successfully loaded from database for date: 2025-03-06
+2025-03-27 03:08:05,520 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "GET /?date=2025-03-06 HTTP/1.1" 200 -
+2025-03-27 03:08:05,533 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:05,534 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:05,750 - INFO - Data successfully loaded from database for date: 2025-03-05
+2025-03-27 03:08:05,751 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "GET /?date=2025-03-05 HTTP/1.1" 200 -
+2025-03-27 03:08:05,764 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:05,775 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:05,991 - INFO - Data successfully loaded from database for date: 2025-03-04
+2025-03-27 03:08:05,993 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:05] "GET /?date=2025-03-04 HTTP/1.1" 200 -
+2025-03-27 03:08:06,004 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:06,006 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:06,212 - INFO - Data successfully loaded from database for date: 2025-03-03
+2025-03-27 03:08:06,213 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "GET /?date=2025-03-03 HTTP/1.1" 200 -
+2025-03-27 03:08:06,225 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:06,226 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:06,617 - INFO - Data successfully loaded from database for date: 2025-03-02
+2025-03-27 03:08:06,618 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "GET /?date=2025-03-02 HTTP/1.1" 200 -
+2025-03-27 03:08:06,630 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:06,631 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:06,961 - INFO - Data successfully loaded from database for date: 2025-03-01
+2025-03-27 03:08:06,962 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "GET /?date=2025-03-01 HTTP/1.1" 200 -
+2025-03-27 03:08:06,973 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:06,977 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,206 - INFO - Data successfully loaded from database for date: 2025-02-28
+2025-03-27 03:08:07,208 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "GET /?date=2025-02-28 HTTP/1.1" 200 -
+2025-03-27 03:08:07,219 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,220 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,558 - INFO - Data successfully loaded from database for date: 2025-02-27
+2025-03-27 03:08:07,559 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "GET /?date=2025-02-27 HTTP/1.1" 200 -
+2025-03-27 03:08:07,571 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,571 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,750 - INFO - Data successfully loaded from database for date: 2025-02-26
+2025-03-27 03:08:07,751 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "GET /?date=2025-02-26 HTTP/1.1" 200 -
+2025-03-27 03:08:07,764 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,765 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,969 - INFO - Data successfully loaded from database for date: 2025-02-25
+2025-03-27 03:08:07,970 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "GET /?date=2025-02-25 HTTP/1.1" 200 -
+2025-03-27 03:08:07,983 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:07,983 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:08,151 - INFO - Data successfully loaded from database for date: 2025-02-24
+2025-03-27 03:08:08,152 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:08] "GET /?date=2025-02-24 HTTP/1.1" 200 -
+2025-03-27 03:08:08,165 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:08,166 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:08,346 - INFO - Data successfully loaded from database for date: 2025-02-23
+2025-03-27 03:08:08,347 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:08] "GET /?date=2025-02-23 HTTP/1.1" 200 -
+2025-03-27 03:08:08,360 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:08,364 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:08,729 - INFO - Data successfully loaded from database for date: 2025-02-22
+2025-03-27 03:08:08,730 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:08] "GET /?date=2025-02-22 HTTP/1.1" 200 -
+2025-03-27 03:08:09,036 - INFO - Data successfully loaded from database for date: 2025-02-20
+2025-03-27 03:08:09,037 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "GET /?date=2025-02-20 HTTP/1.1" 200 -
+2025-03-27 03:08:09,051 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:09,052 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:09,314 - INFO - Data successfully loaded from database for date: 2025-02-19
+2025-03-27 03:08:09,315 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "GET /?date=2025-02-19 HTTP/1.1" 200 -
+2025-03-27 03:08:09,328 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:09,328 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:09,595 - INFO - Data successfully loaded from database for date: 2025-02-18
+2025-03-27 03:08:09,597 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "GET /?date=2025-02-18 HTTP/1.1" 200 -
+2025-03-27 03:08:09,662 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:09,663 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:09,712 - INFO - Data successfully loaded from database for date: 2025-02-21
+2025-03-27 03:08:09,714 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "GET /?date=2025-02-21 HTTP/1.1" 200 -
+2025-03-27 03:08:09,954 - INFO - Data successfully loaded from database for date: 2025-02-17
+2025-03-27 03:08:09,956 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "GET /?date=2025-02-17 HTTP/1.1" 200 -
+2025-03-27 03:08:09,968 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:09,969 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,123 - INFO - Data successfully loaded from database for date: 2025-02-16
+2025-03-27 03:08:10,124 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "GET /?date=2025-02-16 HTTP/1.1" 200 -
+2025-03-27 03:08:10,135 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,136 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,297 - INFO - Data successfully loaded from database for date: 2025-02-15
+2025-03-27 03:08:10,298 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "GET /?date=2025-02-15 HTTP/1.1" 200 -
+2025-03-27 03:08:10,311 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,311 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,467 - INFO - Data successfully loaded from database for date: 2025-02-14
+2025-03-27 03:08:10,468 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "GET /?date=2025-02-14 HTTP/1.1" 200 -
+2025-03-27 03:08:10,479 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,480 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,633 - INFO - Data successfully loaded from database for date: 2025-02-13
+2025-03-27 03:08:10,634 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "GET /?date=2025-02-13 HTTP/1.1" 200 -
+2025-03-27 03:08:10,645 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,646 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,799 - INFO - Data successfully loaded from database for date: 2025-02-12
+2025-03-27 03:08:10,800 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "GET /?date=2025-02-12 HTTP/1.1" 200 -
+2025-03-27 03:08:10,813 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,813 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:10,992 - INFO - Data successfully loaded from database for date: 2025-02-11
+2025-03-27 03:08:10,993 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:10] "GET /?date=2025-02-11 HTTP/1.1" 200 -
+2025-03-27 03:08:11,004 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:11,004 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:11,182 - INFO - Data successfully loaded from database for date: 2025-02-10
+2025-03-27 03:08:11,183 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "GET /?date=2025-02-10 HTTP/1.1" 200 -
+2025-03-27 03:08:11,195 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:11,197 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:11,745 - INFO - Data successfully loaded from database for date: 2025-02-09
+2025-03-27 03:08:11,746 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "GET /?date=2025-02-09 HTTP/1.1" 200 -
+2025-03-27 03:08:11,760 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:11,760 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:11,913 - INFO - Data successfully loaded from database for date: 2025-02-08
+2025-03-27 03:08:11,914 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "GET /?date=2025-02-08 HTTP/1.1" 200 -
+2025-03-27 03:08:11,925 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:11,928 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,102 - INFO - Data successfully loaded from database for date: 2025-02-07
+2025-03-27 03:08:12,103 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "GET /?date=2025-02-07 HTTP/1.1" 200 -
+2025-03-27 03:08:12,115 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,115 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,325 - INFO - Data successfully loaded from database for date: 2025-02-06
+2025-03-27 03:08:12,326 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "GET /?date=2025-02-06 HTTP/1.1" 200 -
+2025-03-27 03:08:12,338 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,339 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,545 - INFO - Data successfully loaded from database for date: 2025-02-05
+2025-03-27 03:08:12,546 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "GET /?date=2025-02-05 HTTP/1.1" 200 -
+2025-03-27 03:08:12,570 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,571 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,793 - INFO - Data successfully loaded from database for date: 2025-02-04
+2025-03-27 03:08:12,794 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "GET /?date=2025-02-04 HTTP/1.1" 200 -
+2025-03-27 03:08:12,805 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,806 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,976 - INFO - Data successfully loaded from database for date: 2025-02-03
+2025-03-27 03:08:12,977 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "GET /?date=2025-02-03 HTTP/1.1" 200 -
+2025-03-27 03:08:12,990 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:12,991 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:13,212 - INFO - Data successfully loaded from database for date: 2025-02-02
+2025-03-27 03:08:13,213 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "GET /?date=2025-02-02 HTTP/1.1" 200 -
+2025-03-27 03:08:13,224 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:13,225 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:13,648 - INFO - Data successfully loaded from database for date: 2025-02-01
+2025-03-27 03:08:13,649 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "GET /?date=2025-02-01 HTTP/1.1" 200 -
+2025-03-27 03:08:13,661 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:13,661 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:13,846 - INFO - Data successfully loaded from database for date: 2025-01-31
+2025-03-27 03:08:13,848 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "GET /?date=2025-01-31 HTTP/1.1" 200 -
+2025-03-27 03:08:13,859 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:13,860 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:14,504 - INFO - Data successfully loaded from database for date: 2025-01-30
+2025-03-27 03:08:14,508 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:14] "GET /?date=2025-01-30 HTTP/1.1" 200 -
+2025-03-27 03:08:14,520 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:14,520 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:14,906 - INFO - Data successfully loaded from database for date: 2025-01-29
+2025-03-27 03:08:14,908 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:14] "GET /?date=2025-01-29 HTTP/1.1" 200 -
+2025-03-27 03:08:14,930 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:14,930 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:15,100 - INFO - Data successfully loaded from database for date: 2025-01-28
+2025-03-27 03:08:15,101 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "GET /?date=2025-01-28 HTTP/1.1" 200 -
+2025-03-27 03:08:15,114 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:15,116 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:15,297 - INFO - Data successfully loaded from database for date: 2025-01-27
+2025-03-27 03:08:15,299 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "GET /?date=2025-01-27 HTTP/1.1" 200 -
+2025-03-27 03:08:15,311 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:15,312 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:15,504 - INFO - Data successfully loaded from database for date: 2025-01-26
+2025-03-27 03:08:15,506 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "GET /?date=2025-01-26 HTTP/1.1" 200 -
+2025-03-27 03:08:15,520 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:15,520 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,050 - INFO - Data successfully loaded from database for date: 2025-01-25
+2025-03-27 03:08:16,052 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "GET /?date=2025-01-25 HTTP/1.1" 200 -
+2025-03-27 03:08:16,065 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,065 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,302 - INFO - Data successfully loaded from database for date: 2025-01-24
+2025-03-27 03:08:16,303 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "GET /?date=2025-01-24 HTTP/1.1" 200 -
+2025-03-27 03:08:16,314 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,315 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,552 - INFO - Data successfully loaded from database for date: 2025-01-23
+2025-03-27 03:08:16,553 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "GET /?date=2025-01-23 HTTP/1.1" 200 -
+2025-03-27 03:08:16,565 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,566 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,867 - INFO - Data successfully loaded from database for date: 2025-01-22
+2025-03-27 03:08:16,868 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "GET /?date=2025-01-22 HTTP/1.1" 200 -
+2025-03-27 03:08:16,880 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:16,881 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:17,211 - INFO - Data successfully loaded from database for date: 2025-01-21
+2025-03-27 03:08:17,212 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:17] "GET /?date=2025-01-21 HTTP/1.1" 200 -
+2025-03-27 03:08:17,225 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:17,227 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:17,766 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:08:17,768 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:17] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:08:17,781 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:08:17,781 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:08:26,317 - INFO - 127.0.0.1 - - [27/Mar/2025 03:08:26] "[33mPOST /send_to_reo HTTP/1.1[0m" 404 -
+2025-03-27 03:11:31,163 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:11:31,163 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:11:31,165 - INFO -  * Restarting with stat
+2025-03-27 03:11:31,544 - WARNING -  * Debugger is active!
+2025-03-27 03:11:31,549 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:11:40,876 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:11:40,891 - INFO - 127.0.0.1 - - [27/Mar/2025 03:11:40] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:11:40,984 - INFO - 127.0.0.1 - - [27/Mar/2025 03:11:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:11:40,984 - INFO - 127.0.0.1 - - [27/Mar/2025 03:11:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:11:46,780 - ERROR - Error sending data to REO: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-03-27 03:11:46,781 - INFO - 127.0.0.1 - - [27/Mar/2025 03:11:46] "[35m[1mPOST /send_to_reo HTTP/1.1[0m" 500 -
+2025-03-27 03:11:58,320 - INFO - 127.0.0.1 - - [27/Mar/2025 03:11:58] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:11:58,332 - INFO - 127.0.0.1 - - [27/Mar/2025 03:11:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:11:58,333 - INFO - 127.0.0.1 - - [27/Mar/2025 03:11:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:12:22,701 - INFO - Settings saved successfully
+2025-03-27 03:12:22,702 - INFO - 127.0.0.1 - - [27/Mar/2025 03:12:22] "POST /save_settings HTTP/1.1" 200 -
+2025-03-27 03:12:45,217 - INFO - 127.0.0.1 - - [27/Mar/2025 03:12:45] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-27 03:12:45,230 - INFO - 127.0.0.1 - - [27/Mar/2025 03:12:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:12:45,230 - INFO - 127.0.0.1 - - [27/Mar/2025 03:12:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:12:58,097 - INFO - 127.0.0.1 - - [27/Mar/2025 03:12:58] "GET /companies HTTP/1.1" 200 -
+2025-03-27 03:12:58,111 - INFO - 127.0.0.1 - - [27/Mar/2025 03:12:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:12:58,112 - INFO - 127.0.0.1 - - [27/Mar/2025 03:12:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:13:06,315 - INFO - 127.0.0.1 - - [27/Mar/2025 03:13:06] "GET /companies HTTP/1.1" 200 -
+2025-03-27 03:13:06,331 - INFO - 127.0.0.1 - - [27/Mar/2025 03:13:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:13:06,331 - INFO - 127.0.0.1 - - [27/Mar/2025 03:13:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:13:11,035 - INFO - 127.0.0.1 - - [27/Mar/2025 03:13:11] "[33mGET /save_to_json?date=undefined HTTP/1.1[0m" 404 -
+2025-03-27 03:16:06,073 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:16:06,073 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:16:06,075 - INFO -  * Restarting with stat
+2025-03-27 03:16:06,421 - WARNING -  * Debugger is active!
+2025-03-27 03:16:06,425 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:16:15,888 - INFO - 127.0.0.1 - - [27/Mar/2025 03:16:15] "GET /companies HTTP/1.1" 200 -
+2025-03-27 03:16:15,968 - INFO - 127.0.0.1 - - [27/Mar/2025 03:16:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:16:15,969 - INFO - 127.0.0.1 - - [27/Mar/2025 03:16:15] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-27 03:16:27,049 - ERROR - Error sending data to REO: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-03-27 03:16:27,050 - INFO - 127.0.0.1 - - [27/Mar/2025 03:16:27] "[35m[1mPOST /send_to_reo HTTP/1.1[0m" 500 -
+2025-03-27 03:17:07,731 - INFO - Data successfully loaded from database for date: 2025-01-21
+2025-03-27 03:17:07,736 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:07] "GET /?date=2025-01-21 HTTP/1.1" 200 -
+2025-03-27 03:17:07,747 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:07,748 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:17:10,318 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:17:10,319 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:10] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:17:10,332 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:10,332 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:17:15,108 - INFO - Data successfully loaded from database for date: 2025-01-19
+2025-03-27 03:17:15,109 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:15] "GET /?date=2025-01-19 HTTP/1.1" 200 -
+2025-03-27 03:17:15,120 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:15,121 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:17:15,858 - INFO - Data successfully loaded from database for date: 2025-01-18
+2025-03-27 03:17:15,859 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:15] "GET /?date=2025-01-18 HTTP/1.1" 200 -
+2025-03-27 03:17:15,882 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:15,882 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:17:16,400 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:17:16,401 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:16] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:17:16,415 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:16,416 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:17:22,883 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:22] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-27 03:17:22,898 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:22,898 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:17:41,061 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:41] "GET /companies HTTP/1.1" 200 -
+2025-03-27 03:17:41,076 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:41,077 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:41] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-27 03:17:58,891 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:58] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:17:58,902 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:17:58,902 - INFO - 127.0.0.1 - - [27/Mar/2025 03:17:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:22:11,012 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:22:11,013 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:22:11,014 - INFO -  * Restarting with stat
+2025-03-27 03:22:11,447 - WARNING -  * Debugger is active!
+2025-03-27 03:22:11,451 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:22:14,179 - INFO - 127.0.0.1 - - [27/Mar/2025 03:22:14] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:22:14,267 - INFO - 127.0.0.1 - - [27/Mar/2025 03:22:14] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-27 03:22:14,267 - INFO - 127.0.0.1 - - [27/Mar/2025 03:22:14] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-27 03:22:16,170 - INFO - 127.0.0.1 - - [27/Mar/2025 03:22:16] "POST /check_db_connection HTTP/1.1" 200 -
+2025-03-27 03:22:31,061 - INFO - 127.0.0.1 - - [27/Mar/2025 03:22:31] "POST /check_reo_connection HTTP/1.1" 200 -
+2025-03-27 03:22:34,085 - INFO - Settings saved successfully
+2025-03-27 03:22:34,085 - INFO - 127.0.0.1 - - [27/Mar/2025 03:22:34] "POST /save_settings HTTP/1.1" 200 -
+2025-03-27 03:22:50,689 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:22:50,689 - INFO - Data prepared for REO: [{"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": null, "object_id": null}]
+2025-03-27 03:22:50,690 - INFO - 127.0.0.1 - - [27/Mar/2025 03:22:50] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:23:13,351 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:23:13,356 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:13] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:23:13,367 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:23:13,367 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:23:20,223 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:23:20,224 - INFO - Data prepared for REO: [{"datetime_brutto": "2025-01-20 02:01:02", "datetime_tara": "2025-01-20 02:01:00", "nomer_ts": "й123цу56", "marka_ts": "ЗАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 16050.0, "tara": 6000.0, "netto": 10050.0, "gruz_name": "КГО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 03:00:00", "datetime_tara": "2025-01-20 03:00:00", "nomer_ts": "ф456ыв56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 15100.0, "tara": 5000.0, "netto": 10100.0, "gruz_name": "РСО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 02:01:01", "datetime_tara": "2025-01-20 02:22:00", "nomer_ts": null, "marka_ts": "Скания", "firma_pol": null, "brutto": 20000.0, "tara": 10000.0, "netto": 10000.0, "gruz_name": "ТКО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 02:02:00", "datetime_tara": "2025-01-20 02:03:00", "nomer_ts": "r567j56", "marka_ts": "Белаз", "firma_pol": "ООО \"Природа\"", "brutto": 20000.0, "tara": 10000.0, "netto": 10000.0, "gruz_name": "ТКО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:01:00", "datetime_tara": "2025-01-20 15:20:00", "nomer_ts": "я345не56", "marka_ts": "ВАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "КГО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:02:00", "datetime_tara": "2025-01-20 15:20:00", "nomer_ts": "я245не56", "marka_ts": "Краз", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "РСО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:04:00", "datetime_tara": "2025-01-20 15:25:00", "nomer_ts": "я445не56", "marka_ts": "ЛУАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "ТКО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:03:00", "datetime_tara": "2025-01-20 15:20:00", "nomer_ts": "я145не56", "marka_ts": "Маз", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "КГО", "object_name": null, "object_id": null}]
+2025-03-27 03:23:20,224 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:20] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:23:21,640 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:23:21,641 - INFO - Data prepared for REO: [{"datetime_brutto": "2025-01-20 02:01:02", "datetime_tara": "2025-01-20 02:01:00", "nomer_ts": "й123цу56", "marka_ts": "ЗАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 16050.0, "tara": 6000.0, "netto": 10050.0, "gruz_name": "КГО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 03:00:00", "datetime_tara": "2025-01-20 03:00:00", "nomer_ts": "ф456ыв56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 15100.0, "tara": 5000.0, "netto": 10100.0, "gruz_name": "РСО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 02:01:01", "datetime_tara": "2025-01-20 02:22:00", "nomer_ts": null, "marka_ts": "Скания", "firma_pol": null, "brutto": 20000.0, "tara": 10000.0, "netto": 10000.0, "gruz_name": "ТКО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 02:02:00", "datetime_tara": "2025-01-20 02:03:00", "nomer_ts": "r567j56", "marka_ts": "Белаз", "firma_pol": "ООО \"Природа\"", "brutto": 20000.0, "tara": 10000.0, "netto": 10000.0, "gruz_name": "ТКО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:01:00", "datetime_tara": "2025-01-20 15:20:00", "nomer_ts": "я345не56", "marka_ts": "ВАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "КГО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:02:00", "datetime_tara": "2025-01-20 15:20:00", "nomer_ts": "я245не56", "marka_ts": "Краз", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "РСО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:04:00", "datetime_tara": "2025-01-20 15:25:00", "nomer_ts": "я445не56", "marka_ts": "ЛУАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "ТКО", "object_name": null, "object_id": null}, {"datetime_brutto": "2025-01-20 15:03:00", "datetime_tara": "2025-01-20 15:20:00", "nomer_ts": "я145не56", "marka_ts": "Маз", "firma_pol": "ООО \"Природа\"", "brutto": 10000.0, "tara": 8000.0, "netto": 2000.0, "gruz_name": "КГО", "object_name": null, "object_id": null}]
+2025-03-27 03:23:21,641 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:21] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:23:27,038 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:23:27,039 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:27] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:23:27,052 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:23:27,053 - INFO - 127.0.0.1 - - [27/Mar/2025 03:23:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:26:07,781 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:07] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-27 03:26:07,796 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:26:07,799 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:26:18,786 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:18] "GET /companies HTTP/1.1" 200 -
+2025-03-27 03:26:18,799 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:26:18,800 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:26:24,873 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:24] "GET /auto HTTP/1.1" 200 -
+2025-03-27 03:26:24,885 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:26:24,887 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:26:31,062 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:31] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:26:31,079 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:26:31,081 - INFO - 127.0.0.1 - - [27/Mar/2025 03:26:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:26:49,423 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:26:49,491 - INFO -  * Restarting with stat
+2025-03-27 03:26:49,975 - WARNING -  * Debugger is active!
+2025-03-27 03:26:49,980 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:26:53,027 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:26:53,089 - INFO -  * Restarting with stat
+2025-03-27 03:26:53,522 - WARNING -  * Debugger is active!
+2025-03-27 03:26:53,526 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:28:26,483 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:28:26,483 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:28:26,485 - INFO -  * Restarting with stat
+2025-03-27 03:28:26,906 - WARNING -  * Debugger is active!
+2025-03-27 03:28:26,911 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:28:31,090 - INFO - 127.0.0.1 - - [27/Mar/2025 03:28:31] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:28:31,194 - INFO - 127.0.0.1 - - [27/Mar/2025 03:28:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:28:31,197 - INFO - 127.0.0.1 - - [27/Mar/2025 03:28:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:28:35,848 - INFO - 127.0.0.1 - - [27/Mar/2025 03:28:35] "POST /check_db_connection HTTP/1.1" 200 -
+2025-03-27 03:28:41,184 - INFO - 127.0.0.1 - - [27/Mar/2025 03:28:41] "POST /check_reo_connection HTTP/1.1" 200 -
+2025-03-27 03:28:44,469 - INFO - Settings saved successfully
+2025-03-27 03:28:44,470 - INFO - 127.0.0.1 - - [27/Mar/2025 03:28:44] "POST /save_settings HTTP/1.1" 200 -
+2025-03-27 03:29:11,224 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:29:11,229 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:11] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:29:11,241 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:29:11,242 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:29:33,336 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:29:33,336 - INFO - Data prepared for REO: [{"datetime_brutto": "2025-01-20 02:01:02", "datetime_tara": "2025-01-20 02:01:00", "nomer_ts": "й123цу56", "marka_ts": "ЗАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 16050.0, "tara": 6000.0, "netto": 10050.0, "gruz_name": "КГО", "object_name": null, "object_id": null}]
+2025-03-27 03:29:33,336 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:33] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:29:34,627 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:29:34,627 - INFO - Data prepared for REO: [{"datetime_brutto": "2025-01-20 02:01:02", "datetime_tara": "2025-01-20 02:01:00", "nomer_ts": "й123цу56", "marka_ts": "ЗАЗ", "firma_pol": "ООО \"Природа\"", "brutto": 16050.0, "tara": 6000.0, "netto": 10050.0, "gruz_name": "КГО", "object_name": null, "object_id": null}]
+2025-03-27 03:29:34,627 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:34] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:29:37,776 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:29:37,778 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:37] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:29:37,790 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:29:37,790 - INFO - 127.0.0.1 - - [27/Mar/2025 03:29:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:31:52,671 - INFO - 127.0.0.1 - - [27/Mar/2025 03:31:52] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:31:52,690 - INFO - 127.0.0.1 - - [27/Mar/2025 03:31:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:31:52,692 - INFO - 127.0.0.1 - - [27/Mar/2025 03:31:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:32:13,061 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:32:13,137 - INFO -  * Restarting with stat
+2025-03-27 03:32:13,641 - WARNING -  * Debugger is active!
+2025-03-27 03:32:13,645 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:32:13,837 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:32:13,851 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:13] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:32:13,943 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:32:13,944 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:32:22,444 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:32:22,447 - ERROR - Error in send_to_reo: NOT NULL constraint failed: auto_go.nomer_ts
+2025-03-27 03:32:22,448 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:22] "[35m[1mPOST /send_to_reo HTTP/1.1[0m" 500 -
+2025-03-27 03:32:23,758 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:32:23,761 - ERROR - Error in send_to_reo: NOT NULL constraint failed: auto_go.nomer_ts
+2025-03-27 03:32:23,763 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:23] "[35m[1mPOST /send_to_reo HTTP/1.1[0m" 500 -
+2025-03-27 03:32:35,579 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:32:35,629 - ERROR - Error sending data to REO: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+2025-03-27 03:32:35,629 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:35] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:32:36,996 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:32:37,048 - ERROR - Error sending data to REO: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+2025-03-27 03:32:37,049 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:37] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:32:51,059 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:32:51,063 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:51] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:32:51,075 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:32:51,077 - INFO - 127.0.0.1 - - [27/Mar/2025 03:32:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:33:03,150 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:33:03,203 - INFO -  * Restarting with stat
+2025-03-27 03:33:03,668 - WARNING -  * Debugger is active!
+2025-03-27 03:33:03,674 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:33:09,797 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:33:09,797 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:33:09,799 - INFO -  * Restarting with stat
+2025-03-27 03:33:10,213 - WARNING -  * Debugger is active!
+2025-03-27 03:33:10,217 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:33:12,298 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:33:12,310 - INFO - 127.0.0.1 - - [27/Mar/2025 03:33:12] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:33:12,390 - INFO - 127.0.0.1 - - [27/Mar/2025 03:33:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:33:12,392 - INFO - 127.0.0.1 - - [27/Mar/2025 03:33:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:36:56,469 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:36:56,469 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:36:56,471 - INFO -  * Restarting with stat
+2025-03-27 03:36:56,930 - WARNING -  * Debugger is active!
+2025-03-27 03:36:56,935 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:36:57,669 - INFO - 127.0.0.1 - - [27/Mar/2025 03:36:57] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-27 03:36:57,757 - INFO - 127.0.0.1 - - [27/Mar/2025 03:36:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:36:57,770 - INFO - 127.0.0.1 - - [27/Mar/2025 03:36:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:37:08,160 - INFO - 127.0.0.1 - - [27/Mar/2025 03:37:08] "GET /companies HTTP/1.1" 200 -
+2025-03-27 03:37:08,174 - INFO - 127.0.0.1 - - [27/Mar/2025 03:37:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:37:08,175 - INFO - 127.0.0.1 - - [27/Mar/2025 03:37:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:37:18,244 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:37:18,304 - INFO -  * Restarting with stat
+2025-03-27 03:37:18,760 - WARNING -  * Debugger is active!
+2025-03-27 03:37:18,764 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:37:28,859 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:37:28,930 - INFO -  * Restarting with stat
+2025-03-27 03:37:29,360 - WARNING -  * Debugger is active!
+2025-03-27 03:37:29,365 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:38:05,965 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:38:05,965 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:38:05,967 - INFO -  * Restarting with stat
+2025-03-27 03:38:06,395 - WARNING -  * Debugger is active!
+2025-03-27 03:38:06,400 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:38:13,372 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:38:13,386 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:13] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:38:13,463 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:38:13,470 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:38:21,034 - INFO - Data successfully loaded from database for date: 2025-01-21
+2025-03-27 03:38:21,037 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:21] "GET /?date=2025-01-21 HTTP/1.1" 200 -
+2025-03-27 03:38:21,050 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:38:21,053 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:38:22,294 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:38:22,297 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:22] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:38:22,310 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:38:22,311 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:38:33,128 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:38:33,179 - ERROR - Error sending data to REO: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+2025-03-27 03:38:33,179 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:33] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:38:34,457 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:38:34,500 - ERROR - Error sending data to REO: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+2025-03-27 03:38:34,500 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:34] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:38:45,042 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-27 03:38:45,045 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:45] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-27 03:38:45,058 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:38:45,058 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:38:50,904 - INFO - Data successfully loaded from database for date: 2025-01-19
+2025-03-27 03:38:50,906 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:50] "GET /?date=2025-01-19 HTTP/1.1" 200 -
+2025-03-27 03:38:50,917 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:38:50,918 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:38:51,691 - INFO - Data successfully loaded from database for date: 2025-01-18
+2025-03-27 03:38:51,693 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:51] "GET /?date=2025-01-18 HTTP/1.1" 200 -
+2025-03-27 03:38:51,703 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:38:51,704 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:38:52,378 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:38:52,380 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:52] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:38:52,392 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:38:52,395 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:38:56,387 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:38:56,428 - ERROR - Error sending data to REO: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+2025-03-27 03:38:56,428 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:56] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:38:57,967 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:38:58,004 - ERROR - Error sending data to REO: Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+2025-03-27 03:38:58,004 - INFO - 127.0.0.1 - - [27/Mar/2025 03:38:58] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:39:39,398 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:39:39,459 - INFO -  * Restarting with stat
+2025-03-27 03:39:39,911 - WARNING -  * Debugger is active!
+2025-03-27 03:39:39,915 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:39:57,085 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:39:57,136 - INFO -  * Restarting with stat
+2025-03-27 03:39:57,589 - WARNING -  * Debugger is active!
+2025-03-27 03:39:57,593 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:40:10,022 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:40:10,023 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:40:10,025 - INFO -  * Restarting with stat
+2025-03-27 03:40:10,473 - WARNING -  * Debugger is active!
+2025-03-27 03:40:10,477 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:40:11,423 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:40:11,437 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:11] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:40:11,528 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:40:11,528 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:40:12,700 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:40:12,703 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:12] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:40:12,714 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:40:12,715 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:40:18,665 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:40:18,706 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:40:18,757 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:18] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:40:19,893 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:40:19,936 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:40:19,951 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:19] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:40:28,225 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:40:28,228 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:28] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:40:28,240 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:40:28,242 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:40:30,502 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:30] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:40:30,514 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:40:30,514 - INFO - 127.0.0.1 - - [27/Mar/2025 03:40:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:41:53,549 - INFO - 127.0.0.1 - - [27/Mar/2025 03:41:53] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:41:53,563 - INFO - 127.0.0.1 - - [27/Mar/2025 03:41:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:41:53,563 - INFO - 127.0.0.1 - - [27/Mar/2025 03:41:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:41:56,777 - INFO - 127.0.0.1 - - [27/Mar/2025 03:41:56] "POST /check_db_connection HTTP/1.1" 200 -
+2025-03-27 03:42:01,003 - INFO - 127.0.0.1 - - [27/Mar/2025 03:42:01] "POST /check_reo_connection HTTP/1.1" 200 -
+2025-03-27 03:42:03,803 - INFO - Settings saved successfully
+2025-03-27 03:42:03,804 - INFO - 127.0.0.1 - - [27/Mar/2025 03:42:03] "POST /save_settings HTTP/1.1" 200 -
+2025-03-27 03:42:13,307 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:42:13,347 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:42:13,370 - INFO - 127.0.0.1 - - [27/Mar/2025 03:42:13] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:42:14,696 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:42:14,740 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:42:14,766 - INFO - 127.0.0.1 - - [27/Mar/2025 03:42:14] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:42:57,428 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:42:57,428 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:42:57,430 - INFO -  * Restarting with stat
+2025-03-27 03:42:57,860 - WARNING -  * Debugger is active!
+2025-03-27 03:42:57,864 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:42:58,939 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:42:58,952 - INFO - 127.0.0.1 - - [27/Mar/2025 03:42:58] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:42:59,050 - INFO - 127.0.0.1 - - [27/Mar/2025 03:42:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:42:59,058 - INFO - 127.0.0.1 - - [27/Mar/2025 03:42:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:43:04,339 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:43:04,380 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:43:04,428 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:04] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:43:05,609 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:43:05,643 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:43:05,681 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:05] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:43:34,053 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:43:34,060 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:34] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:43:34,075 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:43:34,087 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:43:36,227 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:43:36,285 - INFO -  * Restarting with stat
+2025-03-27 03:43:36,758 - WARNING -  * Debugger is active!
+2025-03-27 03:43:36,763 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:43:36,795 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:36] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:43:36,869 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:43:36,884 - INFO - 127.0.0.1 - - [27/Mar/2025 03:43:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:43:50,935 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:43:50,980 - INFO -  * Restarting with stat
+2025-03-27 03:43:51,428 - WARNING -  * Debugger is active!
+2025-03-27 03:43:51,432 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:44:05,112 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:05] "POST /check_db_connection HTTP/1.1" 200 -
+2025-03-27 03:44:08,339 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:08] "POST /check_reo_connection HTTP/1.1" 200 -
+2025-03-27 03:44:14,375 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:44:14,409 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:44:14,442 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:14] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:44:15,449 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:44:15,492 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:44:15,531 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:15] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:44:17,882 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:44:17,898 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:17] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:44:17,975 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:44:17,986 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:44:27,982 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:44:28,017 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:44:28,059 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:28] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:44:29,464 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:44:29,506 - ERROR - Configuration error: Service URL is not configured. Please check settings.
+2025-03-27 03:44:29,554 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:29] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:44:43,651 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:44:43,655 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:43] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:44:43,667 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:44:43,667 - INFO - 127.0.0.1 - - [27/Mar/2025 03:44:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:45:04,249 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:45:04,310 - INFO -  * Restarting with stat
+2025-03-27 03:45:04,728 - WARNING -  * Debugger is active!
+2025-03-27 03:45:04,733 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:45:35,095 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:45:35,153 - INFO -  * Restarting with stat
+2025-03-27 03:45:35,585 - WARNING -  * Debugger is active!
+2025-03-27 03:45:35,590 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:46:06,004 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 03:46:06,004 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 03:46:06,006 - INFO -  * Restarting with stat
+2025-03-27 03:46:06,450 - WARNING -  * Debugger is active!
+2025-03-27 03:46:06,455 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:46:09,128 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:09] "GET /settings HTTP/1.1" 200 -
+2025-03-27 03:46:09,216 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:46:09,217 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:46:15,941 - INFO - Settings saved successfully
+2025-03-27 03:46:15,942 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:15] "POST /save_settings HTTP/1.1" 200 -
+2025-03-27 03:46:22,478 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:46:22,515 - INFO - Sending data to REO service at: https://httpbin.org/post
+2025-03-27 03:46:22,516 - INFO - Request data: [{"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Объект обработки TKO, г. Бузулук", "object_id": ""}, {"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Полигон ТБО, г. Бузулук", "object_id": ""}]
+2025-03-27 03:46:23,415 - INFO - Response status code: 200
+2025-03-27 03:46:23,415 - INFO - Response content: {
+  "args": {}, 
+  "data": "{\"data\": [{\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0438 TKO, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}, {\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041f\\u043e\\u043b\\u0438\\u0433\\u043e\\u043d \\u0422\\u0411\\u041e, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}]}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Accesskey": "b9bf3466-d3a8-4621-aade-bcff5099eca9", 
+    "Content-Length": "1018", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.26.0", 
+    "X-Amzn-Trace-Id": "Root=1-67e48409-594a1ac07dafcad857c57983"
+  }, 
+  "json": {
+    "data": [
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041e\u0431\u044a\u0435\u043a\u0442 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438 TKO, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }, 
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041f\u043e\u043b\u0438\u0433\u043e\u043d \u0422\u0411\u041e, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }
+    ]
+  }, 
+  "origin": "176.59.212.118", 
+  "url": "https://httpbin.org/post"
+}
+
+2025-03-27 03:46:23,415 - INFO - Data successfully sent to REO
+2025-03-27 03:46:23,418 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:23] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:46:23,837 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:46:23,923 - INFO - Sending data to REO service at: https://httpbin.org/post
+2025-03-27 03:46:23,923 - INFO - Request data: [{"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Объект обработки TKO, г. Бузулук", "object_id": ""}, {"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Полигон ТБО, г. Бузулук", "object_id": ""}]
+2025-03-27 03:46:24,745 - INFO - Response status code: 200
+2025-03-27 03:46:24,745 - INFO - Response content: {
+  "args": {}, 
+  "data": "{\"data\": [{\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0438 TKO, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}, {\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041f\\u043e\\u043b\\u0438\\u0433\\u043e\\u043d \\u0422\\u0411\\u041e, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}]}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Accesskey": "b9bf3466-d3a8-4621-aade-bcff5099eca9", 
+    "Content-Length": "1018", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.26.0", 
+    "X-Amzn-Trace-Id": "Root=1-67e4840b-191d40bd1b8d177d39abb9fd"
+  }, 
+  "json": {
+    "data": [
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041e\u0431\u044a\u0435\u043a\u0442 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438 TKO, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }, 
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041f\u043e\u043b\u0438\u0433\u043e\u043d \u0422\u0411\u041e, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }
+    ]
+  }, 
+  "origin": "176.59.212.118", 
+  "url": "https://httpbin.org/post"
+}
+
+2025-03-27 03:46:24,745 - INFO - Data successfully sent to REO
+2025-03-27 03:46:24,747 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:24] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:46:28,801 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:46:28,812 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:28] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:46:28,824 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:46:28,827 - INFO - 127.0.0.1 - - [27/Mar/2025 03:46:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:48:00,618 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:48:00,666 - INFO - Sending data to REO service at: https://httpbin.org/post
+2025-03-27 03:48:00,666 - INFO - Request data: [{"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Объект обработки TKO, г. Бузулук", "object_id": ""}, {"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Полигон ТБО, г. Бузулук", "object_id": ""}]
+2025-03-27 03:48:01,617 - INFO - Response status code: 200
+2025-03-27 03:48:01,617 - INFO - Response content: {
+  "args": {}, 
+  "data": "{\"data\": [{\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0438 TKO, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}, {\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041f\\u043e\\u043b\\u0438\\u0433\\u043e\\u043d \\u0422\\u0411\\u041e, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}]}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Accesskey": "b9bf3466-d3a8-4621-aade-bcff5099eca9", 
+    "Content-Length": "1018", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.26.0", 
+    "X-Amzn-Trace-Id": "Root=1-67e4846c-3431710d68330ea73e7a9393"
+  }, 
+  "json": {
+    "data": [
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041e\u0431\u044a\u0435\u043a\u0442 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438 TKO, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }, 
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041f\u043e\u043b\u0438\u0433\u043e\u043d \u0422\u0411\u041e, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }
+    ]
+  }, 
+  "origin": "176.59.212.118", 
+  "url": "https://httpbin.org/post"
+}
+
+2025-03-27 03:48:01,617 - INFO - Data successfully sent to REO
+2025-03-27 03:48:01,620 - INFO - 127.0.0.1 - - [27/Mar/2025 03:48:01] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:48:02,196 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:48:02,249 - INFO - Sending data to REO service at: https://httpbin.org/post
+2025-03-27 03:48:02,250 - INFO - Request data: [{"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Объект обработки TKO, г. Бузулук", "object_id": ""}, {"datetime_brutto": "2025-01-17 10:05:00", "datetime_tara": "2025-01-17 10:02:00", "nomer_ts": "й123ке56", "marka_ts": "Камаз", "firma_pol": "ООО \"Природа\"", "brutto": 10100.0, "tara": 5100.0, "netto": 5000.0, "gruz_name": "ТКО", "object_name": "Полигон ТБО, г. Бузулук", "object_id": ""}]
+2025-03-27 03:48:03,203 - INFO - Response status code: 200
+2025-03-27 03:48:03,203 - INFO - Response content: {
+  "args": {}, 
+  "data": "{\"data\": [{\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0438 TKO, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}, {\"datetime_brutto\": \"2025-01-17 10:05:00\", \"datetime_tara\": \"2025-01-17 10:02:00\", \"nomer_ts\": \"\\u0439123\\u043a\\u043556\", \"marka_ts\": \"\\u041a\\u0430\\u043c\\u0430\\u0437\", \"firma_pol\": \"\\u041e\\u041e\\u041e \\\"\\u041f\\u0440\\u0438\\u0440\\u043e\\u0434\\u0430\\\"\", \"brutto\": 10100.0, \"tara\": 5100.0, \"netto\": 5000.0, \"gruz_name\": \"\\u0422\\u041a\\u041e\", \"object_name\": \"\\u041f\\u043e\\u043b\\u0438\\u0433\\u043e\\u043d \\u0422\\u0411\\u041e, \\u0433. \\u0411\\u0443\\u0437\\u0443\\u043b\\u0443\\u043a\", \"object_id\": \"\"}]}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Accesskey": "b9bf3466-d3a8-4621-aade-bcff5099eca9", 
+    "Content-Length": "1018", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.26.0", 
+    "X-Amzn-Trace-Id": "Root=1-67e4846d-4d2afe56593a2c262c4bc572"
+  }, 
+  "json": {
+    "data": [
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041e\u0431\u044a\u0435\u043a\u0442 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438 TKO, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }, 
+      {
+        "brutto": 10100.0, 
+        "datetime_brutto": "2025-01-17 10:05:00", 
+        "datetime_tara": "2025-01-17 10:02:00", 
+        "firma_pol": "\u041e\u041e\u041e \"\u041f\u0440\u0438\u0440\u043e\u0434\u0430\"", 
+        "gruz_name": "\u0422\u041a\u041e", 
+        "marka_ts": "\u041a\u0430\u043c\u0430\u0437", 
+        "netto": 5000.0, 
+        "nomer_ts": "\u0439123\u043a\u043556", 
+        "object_id": "", 
+        "object_name": "\u041f\u043e\u043b\u0438\u0433\u043e\u043d \u0422\u0411\u041e, \u0433. \u0411\u0443\u0437\u0443\u043b\u0443\u043a", 
+        "tara": 5100.0
+      }
+    ]
+  }, 
+  "origin": "176.59.212.118", 
+  "url": "https://httpbin.org/post"
+}
+
+2025-03-27 03:48:03,204 - INFO - Data successfully sent to REO
+2025-03-27 03:48:03,207 - INFO - 127.0.0.1 - - [27/Mar/2025 03:48:03] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-27 03:48:04,307 - INFO - Data successfully loaded from database for date: 2025-01-17
+2025-03-27 03:48:04,310 - INFO - 127.0.0.1 - - [27/Mar/2025 03:48:04] "GET /?date=2025-01-17 HTTP/1.1" 200 -
+2025-03-27 03:48:04,321 - INFO - 127.0.0.1 - - [27/Mar/2025 03:48:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-27 03:48:04,324 - INFO - 127.0.0.1 - - [27/Mar/2025 03:48:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 03:52:09,978 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:52:10,042 - INFO -  * Restarting with stat
+2025-03-27 03:52:10,503 - WARNING -  * Debugger is active!
+2025-03-27 03:52:10,508 - INFO -  * Debugger PIN: 215-994-745
+2025-03-27 03:52:15,611 - INFO -  * Detected change in 'c:\\Users\\adml\\Documents\\Adobe\\Web\\app.py', reloading
+2025-03-27 03:52:15,671 - INFO -  * Restarting with stat
+2025-03-27 03:52:16,126 - WARNING -  * Debugger is active!
+2025-03-27 03:52:16,131 - INFO -  * Debugger PIN: 215-994-745

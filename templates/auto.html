@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Транспорт</h2>
+    
+    <div class="mb-3">
+        <button class="btn btn-primary" id="addAuto">
+            <i class="bi bi-plus"></i> Добавить
+        </button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Номер авто</th>
+                    <th>Марка авто</th>
+                    <th>Масса без нагрузки, кг</th>
+                    <th>Максимальная масса, кг</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td class="text-end">{{ row[2] }}</td>
+                    <td class="text-end">{{ row[3] }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary edit-auto" data-id="{{ loop.index }}">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger delete-auto" data-id="{{ loop.index }}">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal fade" id="autoModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Добавить транспорт</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="autoForm">
+                    <div class="mb-3">
+                        <label for="autoNumber" class="form-label">Номер авто:</label>
+                        <input type="text" class="form-control" id="autoNumber" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="autoMark" class="form-label">Марка авто:</label>
+                        <input type="text" class="form-control" id="autoMark" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="minWeight" class="form-label">Масса без нагрузки, кг:</label>
+                        <input type="number" class="form-control" id="minWeight" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="maxWeight" class="form-label">Максимальная масса, кг:</label>
+                        <input type="number" class="form-control" id="maxWeight" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" id="saveAuto">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

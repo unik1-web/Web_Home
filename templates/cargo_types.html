@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Роды груза</h2>
+    
+    <div class="mb-3">
+        <button class="btn btn-primary" id="addCargoType">
+            <i class="bi bi-plus"></i> Добавить
+        </button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Наименование груза</th>
+                    <th>Отправка в РЭО</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ "Отправлять" if row[1] else "Не отправлять" }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary edit-cargo" data-id="{{ loop.index }}">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger delete-cargo" data-id="{{ loop.index }}">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal fade" id="cargoModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Добавить род груза</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="cargoForm">
+                    <div class="mb-3">
+                        <label for="cargoName" class="form-label">Наименование груза:</label>
+                        <input type="text" class="form-control" id="cargoName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Отправка в РЭО:</label>
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reosend" id="reosendYes" value="1" checked>
+                                <label class="form-check-label" for="reosendYes">Отправлять</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reosend" id="reosendNo" value="0">
+                                <label class="form-check-label" for="reosendNo">Не отправлять</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" id="saveCargoType">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
