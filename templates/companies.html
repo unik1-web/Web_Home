@@ -2,9 +2,12 @@
 
 {% block content %}
 <div class="container">
-    <h2 class="mb-4">Компании отправители</h2>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Компании отправители</h2>
+        <a href="/" class="btn btn-secondary">На главную</a>
+    </div>
     
-    <div class="mb-3">
+    <div class="mb-2">
         <button class="btn btn-primary" id="addCompany">
             <i class="bi bi-plus"></i> Добавить
         </button>
@@ -45,27 +48,27 @@
 
 <!-- Add/Edit Modal -->
 <div class="modal fade" id="companyModal" tabindex="-1">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header py-2">
                 <h5 class="modal-title" id="modalTitle">Добавить компанию</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body py-2">
                 <form id="companyForm">
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="companyName" class="form-label">Наименование отправителя:</label>
-                        <input type="text" class="form-control" id="companyName" required>
+                        <input type="text" class="form-control form-control-sm" id="companyName" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="companyINN" class="form-label">ИНН:</label>
-                        <input type="text" class="form-control" id="companyINN" required>
+                        <input type="text" class="form-control form-control-sm" id="companyINN" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="companyKPP" class="form-label">КПП:</label>
-                        <input type="text" class="form-control" id="companyKPP" required>
+                        <input type="text" class="form-control form-control-sm" id="companyKPP" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label class="form-label">РЭО:</label>
                         <div>
                             <div class="form-check">
@@ -80,9 +83,9 @@
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-                <button type="button" class="btn btn-primary" id="saveCompany">Сохранить</button>
+            <div class="modal-footer py-2">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary btn-sm" id="saveCompany">Сохранить</button>
             </div>
         </div>
     </div>

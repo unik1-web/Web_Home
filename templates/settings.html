@@ -2,24 +2,27 @@
 
 {% block content %}
 <div class="container">
-    <h2 class="mb-4">Настройки</h2>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Настройки</h2>
+        <a href="/" class="btn btn-secondary">На главную</a>
+    </div>
     <form method="POST" action="{{ url_for('save_settings') }}">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title mb-4">Настройки модулей</h5>
+                <h5 class="card-title mb-3">Настройки модулей</h5>
                 
                 <!-- Database Settings -->
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="db_path" class="form-label">База данных:</label>
-                    <div class="input-group">
+                    <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-control" id="db_path" name="db_path" 
-                               value="{{ config.get('db_path', '') }}">
+                               value="{{ config.get('db_path', '') }}" style="width: calc(100% - 50px);">
                         <button class="btn btn-outline-secondary" type="button" id="browse_db" data-action="select-db">...</button>
                     </div>
                 </div>
 
                 <!-- Weight Format -->
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="weight_format" class="form-label">Формат веса:</label>
                     <select class="form-select" id="weight_format" name="weight_format">
                         <option value="#." {% if config.get('weight_format') == '#.' %}selected{% endif %}>Без знаков</option>
@@ -29,7 +32,7 @@
                 </div>
 
                 <!-- Date Format -->
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="date_format" class="form-label">Формат даты и времени:</label>
                     <select class="form-select" id="date_format" name="date_format">
                         <option value="%Y-%m-%d %H:%M:%S" {% if config.get('date_format') == '%Y-%m-%d %H:%M:%S' %}selected{% endif %}>YYYY-MM-DD HH:MM:SS</option>
@@ -39,46 +42,46 @@
                 </div>
 
                 <!-- Access Key -->
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="access_key" class="form-label">Ключ доступа:</label>
                     <input type="password" class="form-control" id="access_key" name="access_key" 
                            value="{{ config.get('access_key', '') }}">
                 </div>
 
                 <!-- Object Settings -->
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="object_id1" class="form-label">Идентификатор объекта 1:</label>
                     <input type="text" class="form-control" id="object_id1" name="object_id1" 
                            value="{{ config.get('object_id1', '') }}">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="object_name1" class="form-label">Наименование объекта 1:</label>
                     <input type="text" class="form-control" id="object_name1" name="object_name1" 
                            value="{{ config.get('object_name1', 'Объект обработки TKO, г. Бузулук') }}">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="object_id2" class="form-label">Идентификатор объекта 2:</label>
                     <input type="text" class="form-control" id="object_id2" name="object_id2" 
                            value="{{ config.get('object_id2', '') }}">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="object_name2" class="form-label">Наименование объекта 2:</label>
                     <input type="text" class="form-control" id="object_name2" name="object_name2" 
                            value="{{ config.get('object_name2', 'Полигон ТБО, г. Бузулук') }}">
                 </div>
 
                 <!-- Service URL -->
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="object_url" class="form-label">Адрес сервиса:</label>
                     <input type="text" class="form-control" id="object_url" name="object_url" 
                            value="{{ config.get('object_url', 'https://httpbin.org/post') }}">
                 </div>
 
                 <!-- Font Settings -->
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="font_family" class="form-label">Шрифт:</label>
                     <select class="form-select" id="font_family" name="font_family">
                         <option value="Arial" {% if config.get('font_family') == 'Arial' %}selected{% endif %}>Arial</option>
@@ -88,7 +91,7 @@
                     </select>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="font_size" class="form-label">Размер шрифта:</label>
                     <select class="form-select" id="font_size" name="font_size">
                         {% for size in [8, 9, 10, 11, 12, 14, 16] %}
@@ -100,7 +103,7 @@
         </div>
 
         <!-- Buttons -->
-        <div class="mt-4">
+        <div class="mt-3">
             <button type="submit" class="btn btn-primary">Сохранить</button>
             <button type="button" class="btn btn-secondary" onclick="window.location.href='/'">Отмена</button>
             <button type="button" class="btn btn-info" id="check_db" data-action="check-db">Проверка БД</button>

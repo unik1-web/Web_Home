@@ -116,12 +116,10 @@ def index():
             
         key = (row[0], row[1], row[2])  # nomer_ts, datetimebrutto, datetimetara
         if key not in status_data:
-            status_data[key] = {'status1': '', 'status2': '', 'date': ''}
+            status_data[key] = {'status': '', 'date': ''}
         
         if row[5] == 100:  # Object 1
-            status_data[key]['status1'] = 'Отправлено' if row[3] == 2 else 'Ошибка'
-        elif row[5] == 200:  # Object 2
-            status_data[key]['status2'] = 'Отправлено' if row[3] == 2 else 'Ошибка'
+            status_data[key]['status'] = 'Отправлено' if row[3] == 2 else 'Ошибка'
             
         if row[4] and (not status_data[key]['date'] or row[4] > status_data[key]['date']):
             status_data[key]['date'] = row[4]
@@ -148,7 +146,16 @@ def index():
         
         # Get sending status
         status_key = (row[2], datetime_brutto, datetime_tara)
-        status = status_data.get(status_key, {'status1': 'Готово к отправке', 'status2': 'Готово к отправке', 'date': ''})
+        status = status_data.get(status_key, {'status': 'Готово к отправке', 'date': ''})
+        
+        # Format the sending date if it exists
+        sending_date = ''
+        if status['date']:
+            try:
+                sending_date = datetime.strptime(status['date'], "%Y-%m-%d %H:%M:%S").strftime(config.get("date_format", "%Y-%m-%d %H:%M:%S"))
+            except Exception as e:
+                logger.error(f"Error formatting sending date: {str(e)}")
+                sending_date = status['date']
         
         # Create formatted row
         formatted_row = [
@@ -163,9 +170,8 @@ def index():
             row[8],  # gruz_name
             inn,
             kpp,
-            status['status1'],
-            status['status2'],
-            status['date']
+            status['status'],
+            sending_date
         ]
         formatted_rows.append(formatted_row)
     
@@ -423,6 +429,7 @@ def send_to_reo():
                 return jsonify({'success': False, 'error': f'Ошибка при отправке данных для объекта 2: {error}'})
                 
             logger.info("Successfully sent data for object 2")
+            logger.info(f"Updating database for object 2 with uid: {weight_control['id']}")
             
             # Обновляем базу данных для объекта 2
             try:
