@@ -1,0 +1,26 @@
+{
+    "ObjectId": "93009fd0-af73-48b2-af31-046e36a29b69",
+    "AccessKey": "b9bf3466-d3a8-4621-aade-bcff5099eca9",
+    "WeightControls": [
+        {
+            "id": "6e807580-63cb-4d73-9f79-b4cfd458d7a1",
+            "dateBefore": "2025-01-20 16:01:00+05:00",
+            "dateAfter": "2025-01-20 16:20:00+05:00",
+            "registrationNumber": "У707СА56",
+            "garbageTruckType": null,
+            "garbageTruckBrand": "Мусоровоз",
+            "garbageTruckModel": null,
+            "companyName": "ООО \"Саночистка\"",
+            "companyInn": "5603013425",
+            "companyKpp": "560301001",
+            "weightBefore": "14250.0",
+            "weightAfter": "12550.0",
+            "weightDriver": null,
+            "coefficient": "1",
+            "garbageWeight": "1700.0",
+            "garbageType": "ТКО",
+            "codeFKKO": null,
+            "nameFKKO": null
+        }
+    ]
+}

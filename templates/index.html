@@ -1,121 +1,141 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-fluid">
-    <!-- Date Navigation -->
-    <div class="row mb-3 mt-3">
-        <div class="col">
-            <div class="btn-group">
-                <button class="btn btn-outline-primary" id="prevDate">
-                    <i class="fas fa-chevron-left"></i> Назад
-                </button>
-                <button class="btn btn-outline-primary" id="calendarToggle">
-                    {{ current_date }}
-                </button>
-                <button class="btn btn-outline-primary" id="nextDate">
-                    Вперед <i class="fas fa-chevron-right"></i>
-                </button>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Региональный экологический оператор</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Региональный экологический оператор</h1>
+            <div class="date-controls">
+                <a href="?date={{ prev_date }}" class="btn">Назад</a>
+                <input type="text" id="datePicker" class="date-input" value="{{ current_date }}" readonly>
+                <a href="?date={{ next_date }}" class="btn">Вперед</a>
+                <a href="?date={{ current_date }}" class="btn">Обновить</a>
             </div>
-            <div id="calendar" style="display: none;"></div>
-            <input type="hidden" id="current_date" value="{{ current_date }}">
         </div>
-        <div class="col text-end">
-            <button class="btn btn-primary" id="sendToReo">
-                <i class="fas fa-paper-plane"></i> Отправить в РЭО
-            </button>
-            <button class="btn btn-secondary" id="refresh">
-                <i class="fas fa-sync"></i> Обновить
-            </button>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата провески брутто</th>
+                        <th>Дата провески тары</th>
+                        <th>№ авто</th>
+                        <th>Марка авто</th>
+                        <th>Отправитель</th>
+                        <th>Брутто</th>
+                        <th>Тара</th>
+                        <th>Нетто</th>
+                        <th>Род груза</th>
+                        <th>ИНН</th>
+                        <th>КПП</th>
+                        <th>Статус от объекта 1</th>
+                        <th>Статус от объекта 2</th>
+                        <th>Дата отправки</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                        <td>{{ row[5] }}</td>
+                        <td>{{ row[6] }}</td>
+                        <td>{{ row[7] }}</td>
+                        <td>{{ row[8] }}</td>
+                        <td>{{ row[9] }}</td>
+                        <td>{{ row[10] }}</td>
+                        <td>{{ row[11] }}</td>
+                        <td>{{ row[12] }}</td>
+                        <td>{{ row[13] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <button id="sendBtn" class="btn">Отправить в РЭО</button>
         </div>
     </div>
 
-    <!-- Main Table -->
-    <div class="table-responsive">
-        <table class="table table-striped table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th><input type="checkbox" id="selectAll"></th>
-                    <th>Дата провески брутто</th>
-                    <th>Дата провески тары</th>
-                    <th>№ авто</th>
-                    <th>Марка авто</th>
-                    <th>Отправитель</th>
-                    <th>ИНН</th>
-                    <th>КПП</th>
-                    <th>Брутто</th>
-                    <th>Тара</th>
-                    <th>Нетто</th>
-                    <th>Род груза</th>
-                    <th>Статус отправки объекта 1</th>
-                    <th>Статус отправки объекта 2</th>
-                    <th>Дата отправки</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for row in rows %}
-                <tr>
-                    <td><input type="checkbox" name="row_select" value="{{ loop.index0 }}"></td>
-                    <td>{{ row.data[0] }}</td>
-                    <td>{{ row.data[1] }}</td>
-                    <td>{{ row.data[2] }}</td>
-                    <td>{{ row.data[3] }}</td>
-                    <td>{{ row.data[4] }}</td>
-                    <td>{{ row.inn }}</td>
-                    <td>{{ row.kpp }}</td>
-                    <td class="text-end">{{ row.data[5] }}</td>
-                    <td class="text-end">{{ row.data[6] }}</td>
-                    <td class="text-end">{{ row.data[7] }}</td>
-                    <td>{{ row.data[8] }}</td>
-                    <td>{{ row.status1 }}</td>
-                    <td>{{ row.status2 }}</td>
-                    <td>{{ row.send_date }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<!-- JavaScript for table functionality -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Select All functionality
-    const selectAllCheckbox = document.getElementById('selectAll');
-    if (selectAllCheckbox) {
-        selectAllCheckbox.addEventListener('change', function() {
-            document.querySelectorAll('input[name="row_select"]')
-                .forEach(checkbox => checkbox.checked = this.checked);
+    <script>
+        // Инициализация календаря
+        flatpickr("#datePicker", {
+            locale: "ru",
+            dateFormat: "Y-m-d",
+            onChange: function(selectedDates, dateStr) {
+                window.location.href = "?date=" + dateStr;
+            }
         });
-    }
 
-    // Date navigation
-    const currentDateInput = document.getElementById('current_date');
-    const prevDateBtn = document.getElementById('prevDate');
-    const nextDateBtn = document.getElementById('nextDate');
-
-    if (currentDateInput) {
-        currentDateInput.addEventListener('change', function() {
-            window.location.href = '/?date=' + this.value;
+        // Обработка выбора строк
+        const rows = document.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
         });
-    }
 
-    if (prevDateBtn) {
-        prevDateBtn.addEventListener('click', function() {
-            const date = new Date(currentDateInput.value);
-            date.setDate(date.getDate() - 1);
-            currentDateInput.value = date.toISOString().split('T')[0];
-            window.location.href = '/?date=' + currentDateInput.value;
-        });
-    }
+        // Обработка отправки данных
+        document.getElementById('sendBtn').addEventListener('click', function() {
+            const selectedRows = document.querySelectorAll('tr.selected');
+            if (selectedRows.length === 0) {
+                alert('Пожалуйста, выберите записи для отправки');
+                return;
+            }
 
-    if (nextDateBtn) {
-        nextDateBtn.addEventListener('click', function() {
-            const date = new Date(currentDateInput.value);
-            date.setDate(date.getDate() + 1);
-            currentDateInput.value = date.toISOString().split('T')[0];
-            window.location.href = '/?date=' + currentDateInput.value;
+            const data = Array.from(selectedRows).map(row => {
+                const cells = row.querySelectorAll('td');
+                return {
+                    datetimebrutto: cells[0].textContent,
+                    datetimetara: cells[1].textContent,
+                    nomer_ts: cells[2].textContent,
+                    marka_ts: cells[3].textContent,
+                    firma_pol: cells[4].textContent,
+                    brutto: cells[5].textContent,
+                    tara: cells[6].textContent,
+                    netto: cells[7].textContent,
+                    gruz_name: cells[8].textContent,
+                    inn: cells[9].textContent,
+                    kpp: cells[10].textContent
+                };
+            });
+
+            fetch('/send_to_reo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    alert('Данные успешно отправлены');
+                    location.reload();
+                } else {
+                    alert('Ошибка при отправке данных: ' + result.error);
+                }
+            })
+            .catch(error => {
+                alert('Ошибка при отправке данных: ' + error);
+            });
         });
-    }
-});
-</script>
+    </script>
+</body>
+</html>
 {% endblock %} 

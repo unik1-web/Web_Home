@@ -7,6 +7,9 @@ import fdb
 import os
 import requests
 import uuid
+import itertools
+from tkcalendar import Calendar
+from init_db import init_database
 
 # Configure logging
 logging.basicConfig(
@@ -20,6 +23,15 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+
+# Проверяем и создаем базу данных при запуске
+if not os.path.exists('app_data.sqlite'):
+    logger.info("Database not found. Initializing...")
+    if init_database():
+        logger.info("Database initialized successfully")
+    else:
+        logger.error("Failed to initialize database")
+        raise Exception("Failed to initialize database")
 
 def load_config():
     if os.path.exists("app_conf.json"):
@@ -79,19 +91,29 @@ def index():
     
     # Get sending status data - check both objects
     cursor.execute("""
+        WITH combined_data AS (
+            SELECT nomer_ts, datetimebrutto, datetimetara, 100 as moduletype FROM auto_go
+            UNION ALL
+            SELECT nomer_ts, datetimebrutto, datetimetara, 200 as moduletype FROM new_auto_go
+        )
         SELECT 
-            a.nomer_ts, 
-            a.datetimebrutto, 
-            a.datetimetara,
+            c.nomer_ts, 
+            c.datetimebrutto, 
+            c.datetimetara,
             r.reostatus, 
             r.reodatetime,
-            u.moduletype
-        FROM auto_go a
-        JOIN auto_uid u ON a.datetimebrutto = u.datetimebrutto AND a.nomer_ts = a.nomer_ts
-        JOIN reo_data r ON u.uid = r.uid
+            c.moduletype
+        FROM combined_data c
+        LEFT JOIN auto_uid u ON c.datetimebrutto = u.datetimebrutto 
+            AND c.nomer_ts = u.nomer_ts 
+            AND c.moduletype = u.moduletype
+        LEFT JOIN reo_data r ON u.uid = r.uid
     """)
     status_data = {}
     for row in cursor.fetchall():
+        if not row[0]:  # Skip if nomer_ts is None
+            continue
+            
         key = (row[0], row[1], row[2])  # nomer_ts, datetimebrutto, datetimetara
         if key not in status_data:
             status_data[key] = {'status1': '', 'status2': '', 'date': ''}
@@ -101,7 +123,7 @@ def index():
         elif row[5] == 200:  # Object 2
             status_data[key]['status2'] = 'Отправлено' if row[3] == 2 else 'Ошибка'
             
-        if row[4] > status_data[key]['date']:  # Keep the latest date
+        if row[4] and (not status_data[key]['date'] or row[4] > status_data[key]['date']):
             status_data[key]['date'] = row[4]
     
     conn.close()
@@ -109,36 +131,54 @@ def index():
     # Format data for display
     formatted_rows = []
     for row in rows:
-        formatted_row = list(row[:-1])  # Exclude TIME_DIFF
-        
         # Format dates
-        formatted_row[0] = row[0].strftime(config.get("date_format", "%Y-%m-%d %H:%M:%S"))
-        formatted_row[1] = row[1].strftime(config.get("date_format", "%Y-%m-%d %H:%M:%S"))
+        datetime_brutto = row[0].strftime(config.get("date_format", "%Y-%m-%d %H:%M:%S"))
+        datetime_tara = row[1].strftime(config.get("date_format", "%Y-%m-%d %H:%M:%S"))
         
         # Format weights
         weight_format = config.get("weight_format", "#.##").count('#') - 1
-        formatted_row[5] = f"{float(row[5]):.{weight_format}f}"
-        formatted_row[6] = f"{float(row[6]):.{weight_format}f}"
-        formatted_row[7] = f"{float(row[7]):.{weight_format}f}"
+        brutto = f"{float(row[5]):.{weight_format}f}"
+        tara = f"{float(row[6]):.{weight_format}f}"
+        netto = f"{float(row[7]):.{weight_format}f}"
         
-        # Add company data (INN, KPP)
+        # Get company data
         company_data = companies.get(row[4], {})
-        formatted_row = {
-            'data': formatted_row,
-            'inn': company_data.get('inn', ''),
-            'kpp': company_data.get('kpp', ''),
-        }
+        inn = company_data.get('inn', '')
+        kpp = company_data.get('kpp', '')
         
-        # Add sending status
-        status_key = (row[2], row[0], row[1])  # nomer_ts, datetime_brutto, datetime_tara
+        # Get sending status
+        status_key = (row[2], datetime_brutto, datetime_tara)
         status = status_data.get(status_key, {'status1': 'Готово к отправке', 'status2': 'Готово к отправке', 'date': ''})
-        formatted_row['status1'] = status['status1'] or 'Готово к отправке'
-        formatted_row['status2'] = status['status2'] or 'Готово к отправке'
-        formatted_row['send_date'] = status['date']
         
+        # Create formatted row
+        formatted_row = [
+            datetime_brutto,
+            datetime_tara,
+            row[2],  # nomer_ts
+            row[3],  # marka_ts
+            row[4],  # firma_pol
+            brutto,
+            tara,
+            netto,
+            row[8],  # gruz_name
+            inn,
+            kpp,
+            status['status1'],
+            status['status2'],
+            status['date']
+        ]
         formatted_rows.append(formatted_row)
     
-    return render_template('index.html', rows=formatted_rows, current_date=current_date)
+    # Calculate date range for calendar
+    current_date_obj = datetime.strptime(current_date, '%Y-%m-%d')
+    prev_date = (current_date_obj - timedelta(days=1)).strftime('%Y-%m-%d')
+    next_date = (current_date_obj + timedelta(days=1)).strftime('%Y-%m-%d')
+    
+    return render_template('index.html', 
+                         data=formatted_rows, 
+                         current_date=current_date,
+                         prev_date=prev_date,
+                         next_date=next_date)
 
 @app.route('/settings')
 def settings():
@@ -205,217 +245,344 @@ def save_settings():
         logger.error(f"Error saving settings: {str(e)}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
+def send_to_reo_service(json_data, url):
+    try:
+        headers = {
+            'Content-Type': 'application/json',
+            'AccessKey': json_data.get('AccessKey', '')
+        }
+        response = requests.post(url, json=json_data, headers=headers)
+        response.raise_for_status()
+        logger.info(f"Data successfully sent to REO service for object {json_data.get('ObjectId', 'unknown')}")
+        return True, None
+    except requests.exceptions.RequestException as e:
+        error_msg = f"Error sending data to REO service: {str(e)}"
+        logger.error(error_msg)
+        return False, error_msg
+
 @app.route('/send_to_reo', methods=['POST'])
 def send_to_reo():
     try:
-        config = load_config()
         data = request.get_json()
-        
-        # Get required data from the request
-        date_brutto = data.get('date')
-        selected_rows = data.get('selected_rows', [])
-        
-        if not date_brutto or not selected_rows:
-            return jsonify({'status': 'error', 'message': 'Missing required data'}), 400
-            
-        # Get data from database for selected rows
-        db_path = config.get("db_path", r'C:\VESYEVENT.GDB')
-        rows = fetch_data(date_brutto, db_path)
-        
-        # Connect to SQLite database to check already sent records
+        if not data:
+            logger.error("No data received in send_to_reo request")
+            return jsonify({'success': False, 'error': 'Нет данных для отправки'})
+
+        # Загрузка данных из таблицы list_auto
         conn = sqlite3.connect('app_data.sqlite')
         cursor = conn.cursor()
-        
-        # Get list of already sent records
-        cursor.execute("""
-            SELECT DISTINCT a.nomer_ts, a.datetimebrutto, a.datetimetara, u.moduletype
-            FROM auto_go a
-            JOIN auto_uid u ON a.datetimebrutto = u.datetimebrutto AND a.nomer_ts = a.nomer_ts
-            JOIN reo_data r ON u.uid = r.uid
-            WHERE r.reostatus = 2
-        """)
-        sent_records = {(row[0], row[1], row[2], row[3]) for row in cursor.fetchall()}
-        
-        # Filter only selected rows that haven't been sent yet
-        selected_data = []
-        for i in selected_rows:
-            if i >= len(rows):
-                continue
-                
-            row = rows[i]
-            record_key1 = (row[2], row[0], row[1], 100)  # Object 1
-            record_key2 = (row[2], row[0], row[1], 200)  # Object 2
-            
-            if record_key1 not in sent_records:
-                selected_data.append((row, 100))  # Add for Object 1
-            if record_key2 not in sent_records:
-                selected_data.append((row, 200))  # Add for Object 2
-        
-        if not selected_data:
-            return jsonify({'status': 'warning', 'message': 'All selected records have already been sent'})
-        
-        # Format data for REO and prepare database records
-        reo_data = []
-        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
-        # Get company data for INN and KPP
-        cursor.execute("SELECT name, inn, kpp FROM list_companies")
-        companies = {row[0]: {'inn': row[1], 'kpp': row[2]} for row in cursor.fetchall()}
-        
-        # Track processed records to avoid duplicates
-        processed_records = set()
-        
-        for row, module_type in selected_data:
-            # Generate unique ID for this record
-            uid = str(uuid.uuid4())
-            
-            # Get object details based on module type
-            object_name = config.get('object_name1' if module_type == 100 else 'object_name2', '')
-            object_id = config.get('object_id1' if module_type == 100 else 'object_id2', '')
-            
-            # Format data for REO service
-            reo_record = {
-                'datetime_brutto': row[0].strftime("%Y-%m-%d %H:%M:%S"),
-                'datetime_tara': row[1].strftime("%Y-%m-%d %H:%M:%S"),
-                'nomer_ts': row[2],
-                'marka_ts': row[3],
-                'firma_pol': row[4],
-                'brutto': float(row[5]),
-                'tara': float(row[6]),
-                'netto': float(row[7]),
-                'gruz_name': row[8],
-                'object_name': object_name,
-                'object_id': object_id
-            }
-            reo_data.append(reo_record)
-            
-            # Get company data
-            company_data = companies.get(row[4], {'inn': '', 'kpp': ''})
-            
-            # Create unique key for this record
-            record_key = (row[2], row[0].strftime("%Y-%m-%d %H:%M:%S"), row[1].strftime("%Y-%m-%d %H:%M:%S"))
-            
-            # Insert record into auto_go table only if not processed yet
-            if record_key not in processed_records:
-                cursor.execute("""
-                    INSERT INTO auto_go (
-                        datetimebrutto, datetimetara, nomer_ts, marka_ts, firma_pol,
-                        brutto, tara, netto, gruz_name, inn, kpp
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (
-                    row[0].strftime("%Y-%m-%d %H:%M:%S"),
-                    row[1].strftime("%Y-%m-%d %H:%M:%S"),
-                    row[2], row[3], row[4], row[5], row[6], row[7], row[8],
-                    company_data['inn'], company_data['kpp']
-                ))
-                processed_records.add(record_key)
-            
-            # Insert record into auto_uid table
-            cursor.execute("""
-                INSERT INTO auto_uid (moduletype, datetimebrutto, uid)
-                VALUES (?, ?, ?)
-            """, (module_type, row[0].strftime("%Y-%m-%d %H:%M:%S"), uid))
-            
-            # Insert record into reo_data table
-            cursor.execute("""
-                INSERT INTO reo_data (uid, reostatus, reodatetime)
-                VALUES (?, ?, ?)
-            """, (uid, 2, current_time))  # status 2 means "sent"
-            
-            # Insert record into new_auto_go table only if not processed yet
-            if record_key not in processed_records:
-                cursor.execute("""
-                    INSERT INTO new_auto_go (
-                        datetimebrutto, datetimetara, nomer_ts, marka_ts, firma_pol,
-                        brutto, tara, netto, gruz_name, inn, kpp
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (
-                    row[0].strftime("%Y-%m-%d %H:%M:%S"),
-                    row[1].strftime("%Y-%m-%d %H:%M:%S"),
-                    row[2], row[3], row[4], row[5], row[6], row[7], row[8],
-                    company_data['inn'], company_data['kpp']
-                ))
-        
-        # Commit changes to database
-        conn.commit()
-        
-        # Send data to REO service
-        try:
-            # Try both possible URL config keys
-            service_url = config.get('object_url') or config.get('service_url')
-            if not service_url:
-                raise ValueError("Service URL is not configured. Please check settings and make sure 'Адрес сервиса' is filled in.")
-                
-            if not service_url.startswith(('http://', 'https://')):
-                service_url = 'https://' + service_url
-                
-            access_key = config.get('access_key')
-            if not access_key:
-                raise ValueError("Access key is not configured. Please check settings.")
-                
-            headers = {
-                'Content-Type': 'application/json',
-                'AccessKey': access_key
-            }
-            
-            logger.info(f"Sending data to REO service at: {service_url}")
-            logger.info(f"Request data: {json.dumps(reo_data, ensure_ascii=False)}")
-            
-            response = requests.post(
-                service_url,
-                headers=headers,
-                json={'data': reo_data}
-            )
-            
-            logger.info(f"Response status code: {response.status_code}")
-            logger.info(f"Response content: {response.text}")
-            
-            if response.status_code == 200:
-                logger.info("Data successfully sent to REO")
-                status_message = "Data successfully sent to REO"
-            else:
-                logger.error(f"Error from REO service: {response.status_code}, Response: {response.text}")
-                status_message = f"Error from REO service: {response.status_code}"
-                # If request failed, rollback database changes
-                cursor.execute("DELETE FROM reo_data WHERE reodatetime = ?", (current_time,))
-                cursor.execute("DELETE FROM auto_uid WHERE datetimebrutto IN (SELECT datetimebrutto FROM auto_go WHERE datetimebrutto = ?)", 
-                             (current_time,))
-                cursor.execute("DELETE FROM auto_go WHERE datetimebrutto = ?", (current_time,))
-                cursor.execute("DELETE FROM new_auto_go WHERE datetimebrutto = ?", (current_time,))
-                conn.commit()
-                
-        except ValueError as ve:
-            logger.error(f"Configuration error: {str(ve)}")
-            status_message = str(ve)
-            # Rollback database changes
-            cursor.execute("DELETE FROM reo_data WHERE reodatetime = ?", (current_time,))
-            cursor.execute("DELETE FROM auto_uid WHERE datetimebrutto IN (SELECT datetimebrutto FROM auto_go WHERE datetimebrutto = ?)", 
-                         (current_time,))
-            cursor.execute("DELETE FROM auto_go WHERE datetimebrutto = ?", (current_time,))
-            cursor.execute("DELETE FROM new_auto_go WHERE datetimebrutto = ?", (current_time,))
-            conn.commit()
-        except Exception as e:
-            logger.error(f"Error sending data to REO: {str(e)}")
-            status_message = f"Error sending data to REO: {str(e)}"
-            # Rollback database changes
-            cursor.execute("DELETE FROM reo_data WHERE reodatetime = ?", (current_time,))
-            cursor.execute("DELETE FROM auto_uid WHERE datetimebrutto IN (SELECT datetimebrutto FROM auto_go WHERE datetimebrutto = ?)", 
-                         (current_time,))
-            cursor.execute("DELETE FROM auto_go WHERE datetimebrutto = ?", (current_time,))
-            cursor.execute("DELETE FROM new_auto_go WHERE datetimebrutto = ?", (current_time,))
-            conn.commit()
-        
+        cursor.execute("SELECT nomer_ts2, marka_ts2, min_weight, max_weight FROM list_auto")
+        transport_data = cursor.fetchall()
         conn.close()
-        
-        return jsonify({
-            'status': 'success',
-            'message': f'Successfully processed {len(reo_data)} records. {status_message}',
-            'data': reo_data
-        })
-        
+
+        if not transport_data:
+            logger.error("No transport data found in list_auto table")
+            return jsonify({'success': False, 'error': 'Не найдены данные о транспорте'})
+
+        # Создание словаря для быстрого поиска данных по номеру авто
+        transport_dict = {nomer: (marka, min_weight, max_weight) for nomer, marka, min_weight, max_weight in transport_data}
+        numbers = list(transport_dict.keys())
+        number_iterator = itertools.cycle(numbers)
+
+        # Получаем настройки из конфига
+        config = load_config()
+        object_id = config.get('object_id1', '')
+        access_key = config.get('access_key', '')
+        service_url = config.get('object_url', '')
+
+        if not all([object_id, access_key, service_url]):
+            logger.error("Missing required configuration parameters")
+            return jsonify({'success': False, 'error': 'Отсутствуют обязательные параметры конфигурации'})
+
+        # Формирование JSON для отправки в РЭО
+        json_data = {
+            "ObjectId": object_id,
+            "AccessKey": access_key,
+            "WeightControls": []
+        }
+
+        for record in data:
+            try:
+                # Генерация уникального uid для машины
+                uid = str(uuid.uuid4())
+
+                # Преобразуем строку даты обратно в объект datetime
+                date_before = datetime.strptime(record["datetimebrutto"], "%Y-%m-%d %H:%M:%S").strftime("%Y-%m-%d %H:%M:%S+05:00")
+                date_after = datetime.strptime(record["datetimetara"], "%Y-%m-%d %H:%M:%S").strftime("%Y-%m-%d %H:%M:%S+05:00")
+                
+                weight_control = {
+                    "id": uid,
+                    "dateBefore": date_before,
+                    "dateAfter": date_after,
+                    "registrationNumber": record["nomer_ts"],
+                    "garbageTruckType": None,
+                    "garbageTruckBrand": record["marka_ts"],
+                    "garbageTruckModel": None,
+                    "companyName": record["firma_pol"],
+                    "companyInn": record["inn"],
+                    "companyKpp": record["kpp"],
+                    "weightBefore": str(record["brutto"]),
+                    "weightAfter": str(record["tara"]),
+                    "weightDriver": None,
+                    "coefficient": "1",
+                    "garbageWeight": str(record["netto"]),
+                    "garbageType": record["gruz_name"],
+                    "codeFKKO": None,
+                    "nameFKKO": None
+                }
+                json_data["WeightControls"].append(weight_control)
+            except Exception as e:
+                logger.error(f"Error processing record: {str(e)}")
+                continue
+
+        if not json_data["WeightControls"]:
+            logger.error("No valid records to send")
+            return jsonify({'success': False, 'error': 'Нет валидных записей для отправки'})
+
+        # Сохраняем данные в temp.json с правильной кодировкой
+        try:
+            with open("temp.json", "w", encoding="utf-8") as temp_file:
+                json.dump(json_data, temp_file, ensure_ascii=False, indent=4)
+        except Exception as e:
+            logger.error(f"Error saving temp.json: {str(e)}")
+            return jsonify({'success': False, 'error': f'Ошибка при сохранении временного файла: {str(e)}'})
+
+        # Отправляем данные в РЭО
+        success, error = send_to_reo_service(json_data, service_url)
+        if not success:
+            return jsonify({'success': False, 'error': error})
+
+        # После успешной отправки, обновляем базу данных
+        try:
+            conn = sqlite3.connect('app_data.sqlite')
+            cursor = conn.cursor()
+
+            for weight_control in json_data["WeightControls"]:
+                # Вставка данных в таблицу auto_uid
+                cursor.execute("""
+                    INSERT INTO auto_uid (moduletype, datetimebrutto, nomer_ts, uid)
+                    VALUES (?, ?, ?, ?)
+                """, (
+                    100,
+                    datetime.strptime(weight_control["dateBefore"], "%Y-%m-%d %H:%M:%S+05:00").strftime("%Y-%m-%d %H:%M:%S"),
+                    weight_control["registrationNumber"],
+                    weight_control["id"]))
+
+                # Вставка данных в таблицу reo_data
+                cursor.execute("""
+                    INSERT INTO reo_data (uid, reostatus, reodatetime)
+                    VALUES (?, ?, ?)
+                """, (
+                    weight_control["id"], 2,
+                    datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+
+                # Вставка данных в таблицу auto_go
+                cursor.execute("""
+                    INSERT INTO auto_go (datetimebrutto, datetimetara, nomer_ts, marka_ts, firma_pol, 
+                    brutto, tara, netto, gruz_name, inn, kpp)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)                    
+                """, (
+                    datetime.strptime(weight_control["dateBefore"], "%Y-%m-%d %H:%M:%S+05:00").strftime("%Y-%m-%d %H:%M:%S"),
+                    datetime.strptime(weight_control["dateAfter"], "%Y-%m-%d %H:%M:%S+05:00").strftime("%Y-%m-%d %H:%M:%S"),
+                    weight_control["registrationNumber"],
+                    weight_control["garbageTruckBrand"],
+                    weight_control["companyName"],
+                    weight_control["weightBefore"],
+                    weight_control["weightAfter"],
+                    weight_control["garbageWeight"],
+                    weight_control["garbageType"],
+                    weight_control["companyInn"],
+                    weight_control["companyKpp"]
+                ))
+
+            # Создание и отправка данных для второго объекта
+            logger.info("Creating data for object 2...")
+            new_json_data = create_additional_json(json_data)
+            
+            if not new_json_data:
+                logger.error("Failed to create data for object 2")
+                return jsonify({'success': False, 'error': 'Не удалось создать данные для объекта 2'})
+                
+            logger.info(f"Created {len(new_json_data['WeightControls'])} records for object 2")
+            
+            # Сохраняем данные для объекта 2 в отдельный файл для отладки
+            try:
+                with open("temp_additional.json", "w", encoding="utf-8") as temp_file:
+                    json.dump(new_json_data, temp_file, ensure_ascii=False, indent=4)
+                logger.info("Saved object 2 data to temp_additional.json")
+            except Exception as e:
+                logger.error(f"Error saving temp_additional.json: {str(e)}")
+                return jsonify({'success': False, 'error': f'Ошибка при сохранении данных объекта 2: {str(e)}'})
+
+            # Отправляем данные для объекта 2
+            logger.info("Sending data for object 2...")
+            success, error = send_to_reo_service(new_json_data, service_url)
+            
+            if not success:
+                logger.error(f"Failed to send data for object 2: {error}")
+                return jsonify({'success': False, 'error': f'Ошибка при отправке данных для объекта 2: {error}'})
+                
+            logger.info("Successfully sent data for object 2")
+            
+            # Обновляем базу данных для объекта 2
+            try:
+                for weight_control in new_json_data["WeightControls"]:
+                    # Вставка данных в таблицу auto_uid для объекта 2
+                    cursor.execute("""
+                        INSERT INTO auto_uid (moduletype, datetimebrutto, nomer_ts, uid)
+                        VALUES (?, ?, ?, ?)
+                    """, (
+                        200,
+                        datetime.strptime(weight_control["dateBefore"], "%Y-%m-%d %H:%M:%S+05:00").strftime("%Y-%m-%d %H:%M:%S"),
+                        weight_control["registrationNumber"],
+                        weight_control["id"]))
+                    logger.info(f"Inserted auto_uid record for object 2: {weight_control['id']}")
+
+                    # Вставка данных в таблицу reo_data для объекта 2
+                    cursor.execute("""
+                        INSERT INTO reo_data (uid, reostatus, reodatetime)
+                        VALUES (?, ?, ?)
+                    """, (
+                        weight_control["id"], 2,
+                        datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+                    logger.info(f"Inserted reo_data record for object 2: {weight_control['id']}")
+
+                    # Вставка данных в таблицу new_auto_go
+                    cursor.execute("""
+                        INSERT INTO new_auto_go (datetimebrutto, datetimetara, nomer_ts, marka_ts, firma_pol, 
+                        brutto, tara, netto, gruz_name, inn, kpp)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)                    
+                    """, (
+                        datetime.strptime(weight_control["dateBefore"], "%Y-%m-%d %H:%M:%S+05:00").strftime("%Y-%m-%d %H:%M:%S"),
+                        datetime.strptime(weight_control["dateAfter"], "%Y-%m-%d %H:%M:%S+05:00").strftime("%Y-%m-%d %H:%M:%S"),
+                        weight_control["registrationNumber"],
+                        weight_control["garbageTruckBrand"],
+                        weight_control["companyName"],
+                        weight_control["weightBefore"],
+                        weight_control["weightAfter"],
+                        weight_control["garbageWeight"],
+                        weight_control["garbageType"],
+                        weight_control["companyInn"],
+                        weight_control["companyKpp"]
+                    ))
+                    logger.info(f"Inserted new_auto_go record for object 2: {weight_control['registrationNumber']}")
+            except Exception as e:
+                logger.error(f"Error updating database for object 2: {str(e)}")
+                return jsonify({'success': False, 'error': f'Ошибка при обновлении базы данных для объекта 2: {str(e)}'})
+
+            conn.commit()
+            conn.close()
+            logger.info("All data successfully sent and saved to database")
+            return jsonify({'success': True, 'message': 'Данные успешно отправлены'})
+        except Exception as e:
+            logger.error(f"Error updating database: {str(e)}")
+            return jsonify({'success': False, 'error': f'Ошибка при обновлении базы данных: {str(e)}'})
+
     except Exception as e:
-        logger.error(f"Error in send_to_reo: {str(e)}")
-        return jsonify({'status': 'error', 'message': str(e)}), 500
+        logger.error(f"Unexpected error in send_to_reo: {str(e)}")
+        return jsonify({'success': False, 'error': f'Неожиданная ошибка: {str(e)}'})
+
+def create_additional_json(temp_data):
+    try:
+        if not temp_data or "WeightControls" not in temp_data or not temp_data["WeightControls"]:
+            logger.error("No data in temp_data for creating additional JSON")
+            return None
+
+        # Загрузка данных из таблицы list_auto
+        conn = sqlite3.connect('app_data.sqlite')
+        cursor = conn.cursor()
+        cursor.execute("SELECT nomer_ts2, marka_ts2, min_weight, max_weight FROM list_auto")
+        transport_data = cursor.fetchall()
+        conn.close()
+
+        if not transport_data:
+            logger.error("No transport data found in list_auto table")
+            return None
+
+        # Создание словаря для быстрого поиска данных по номеру авто
+        transport_dict = {nomer: (marka, min_weight, max_weight) for nomer, marka, min_weight, max_weight in transport_data}
+        numbers = list(transport_dict.keys())
+        number_iterator = itertools.cycle(numbers)
+
+        # Получаем настройки из конфига
+        config = load_config()
+        object_id2 = config.get('object_id2', '')
+        access_key = config.get('access_key', '')
+
+        if not object_id2 or not access_key:
+            logger.error("Missing required configuration parameters for object 2")
+            return None
+
+        # Создание нового JSON-файла
+        new_json_data = {
+            "ObjectId": object_id2,
+            "AccessKey": access_key,
+            "WeightControls": []
+        }
+
+        for weight_control in temp_data["WeightControls"]:
+            try:
+                # Получаем данные из temp.json
+                date_before = datetime.strptime(weight_control["dateBefore"], "%Y-%m-%d %H:%M:%S+05:00")
+                date_after = datetime.strptime(weight_control["dateAfter"], "%Y-%m-%d %H:%M:%S+05:00")
+                garbage_weight = float(weight_control["garbageWeight"])
+
+                # Сдвигаем даты на 1 час
+                date_before2 = (date_before + timedelta(hours=1)).strftime("%Y-%m-%d %H:%M:%S+05:00")
+                date_after2 = (date_after + timedelta(hours=1)).strftime("%Y-%m-%d %H:%M:%S+05:00")
+
+                # Получаем данные из списка "Транспорт"
+                while True:
+                    registration_number2 = next(number_iterator)
+                    marka_ts2, min_weight, max_weight = transport_dict[registration_number2]
+
+                    # Рассчитываем новые значения веса
+                    weight_before2 = garbage_weight * 0.85 + min_weight
+                    weight_after2 = min_weight
+                    garbage_weight2 = garbage_weight * 0.85
+                    if weight_before2 > max_weight:
+                        continue
+                    else:
+                        break
+
+                # Формируем новую запись
+                new_weight_control = {
+                    "id": str(uuid.uuid4()),
+                    "dateBefore": date_before2,
+                    "dateAfter": date_after2,
+                    "registrationNumber": registration_number2,
+                    "garbageTruckType": None,
+                    "garbageTruckBrand": marka_ts2,
+                    "garbageTruckModel": None,
+                    "companyName": 'ООО "Саночистка"',
+                    "companyInn": "5603013425",
+                    "companyKpp": "560301001",
+                    "weightBefore": str(weight_before2),
+                    "weightAfter": str(weight_after2),
+                    "weightDriver": None,
+                    "coefficient": "1",
+                    "garbageWeight": str(garbage_weight2),
+                    "garbageType": "ТКО",
+                    "codeFKKO": None,
+                    "nameFKKO": None
+                }
+
+                # Добавляем запись в новый JSON
+                new_json_data["WeightControls"].append(new_weight_control)
+                logger.info(f"Created new weight control for object 2: {registration_number2}")
+            except Exception as e:
+                logger.error(f"Error processing record in create_additional_json: {str(e)}")
+                continue
+
+        if not new_json_data["WeightControls"]:
+            logger.error("No valid records created for object 2")
+            return None
+
+        logger.info(f"Successfully created {len(new_json_data['WeightControls'])} records for object 2")
+        return new_json_data
+    except Exception as e:
+        logger.error(f"Error in create_additional_json: {str(e)}")
+        return None
 
 # Cargo Types Management
 @app.route('/cargo_types/add', methods=['POST'])
