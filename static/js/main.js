@@ -2,6 +2,14 @@ $(document).ready(function() {
     // Initialize date picker
     let currentDate = new Date($('#datePicker').val());
     
+    // Close application
+    $('#closeApp').click(function(e) {
+        e.preventDefault();
+        if (confirm('Вы уверены, что хотите закрыть программу?')) {
+            window.location.href = '/shutdown';
+        }
+    });
+    
     // Calendar toggle
     $('#calendarToggle').click(function() {
         $('#calendar').toggle();
@@ -61,11 +69,6 @@ $(document).ready(function() {
             }
         })
         .catch(error => showError(error));
-    });
-    
-    // Save to JSON
-    $('#saveToJSON').click(function() {
-        window.location.href = '/save_to_json?date=' + $('#datePicker').val();
     });
     
     // Refresh data

@@ -8,8 +8,27 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[('templates', 'templates'), ('static', 'static')],
-    hiddenimports=[],
+    datas=[
+        ('templates', 'templates'),
+        ('static', 'static'),
+        ('app_conf.json', '.'),
+        ('MAINICON.ico', '.'),
+        ('init_db.py', '.'),
+        ('update_db.py', '.')
+    ],
+    hiddenimports=[
+        'flask',
+        'sqlite3',
+        'fdb',
+        'tkcalendar',
+        'requests',
+        'uuid',
+        'itertools',
+        'json',
+        'logging',
+        'datetime',
+        'os'
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -41,5 +60,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['C:\\Users\\adml\\Documents\\Adobe\\Web\\MAINICON.ico'],
+    icon='MAINICON.ico'
 )

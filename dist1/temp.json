@@ -1,0 +1,26 @@
+{
+    "ObjectId": "dbdaaac9-1c07-4eda-ad43-29f544570309",
+    "AccessKey": "b9bf3466-d3a8-4621-aade-bcff5099eca9",
+    "WeightControls": [
+        {
+            "id": "48f92149-fc52-4081-8379-120b4cc5aa1f",
+            "dateBefore": "2025-01-20 15:04:00+05:00",
+            "dateAfter": "2025-01-20 15:25:00+05:00",
+            "registrationNumber": "я445не56",
+            "garbageTruckType": null,
+            "garbageTruckBrand": "ЛУАЗ",
+            "garbageTruckModel": null,
+            "companyName": "ООО \"Природа\"",
+            "companyInn": "612167252",
+            "companyKpp": "561101001",
+            "weightBefore": "10000",
+            "weightAfter": "8000",
+            "weightDriver": null,
+            "coefficient": "1",
+            "garbageWeight": "2000",
+            "garbageType": "ТКО",
+            "codeFKKO": null,
+            "nameFKKO": null
+        }
+    ]
+}

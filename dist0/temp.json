@@ -1,0 +1,26 @@
+{
+    "ObjectId": "dbdaaac9-1c07-4eda-ad43-29f544570309",
+    "AccessKey": "b9bf3466-d3a8-4621-aade-bcff5099eca9",
+    "WeightControls": [
+        {
+            "id": "eb010644-64c4-4a4a-bc3d-91ca9700745f",
+            "dateBefore": "2025-01-20 15:03:00+05:00",
+            "dateAfter": "2025-01-20 15:20:00+05:00",
+            "registrationNumber": "я145не56",
+            "garbageTruckType": null,
+            "garbageTruckBrand": "Маз",
+            "garbageTruckModel": null,
+            "companyName": "ООО \"Природа\"",
+            "companyInn": "612167252",
+            "companyKpp": "561101001",
+            "weightBefore": "10000",
+            "weightAfter": "8000",
+            "weightDriver": null,
+            "coefficient": "1",
+            "garbageWeight": "2000",
+            "garbageType": "КГО",
+            "codeFKKO": null,
+            "nameFKKO": null
+        }
+    ]
+}

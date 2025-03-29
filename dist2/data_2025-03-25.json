@@ -1,0 +1,14 @@
+[
+    {
+        "datetime_brutto": "2025-03-25 15:02:01",
+        "datetime_tara": "2025-03-25 15:20:00",
+        "nomer_ts": "я545не56",
+        "marka_ts": "Камаз",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 10000.0,
+        "tara": 8000.0,
+        "netto": 2000.0,
+        "gruz_name": "КГО",
+        "time_diff": 18
+    }
+]

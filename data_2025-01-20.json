@@ -1,0 +1,90 @@
+[
+    {
+        "datetime_brutto": "2025-01-20 02:01:02",
+        "datetime_tara": "2025-01-20 02:01:00",
+        "nomer_ts": "й123цу56",
+        "marka_ts": "ЗАЗ",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 16050.0,
+        "tara": 6000.0,
+        "netto": 10050.0,
+        "gruz_name": "КГО"
+    },
+    {
+        "datetime_brutto": "2025-01-20 03:00:00",
+        "datetime_tara": "2025-01-20 03:00:00",
+        "nomer_ts": "ф456ыв56",
+        "marka_ts": "Камаз",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 15100.0,
+        "tara": 5000.0,
+        "netto": 10100.0,
+        "gruz_name": "РСО"
+    },
+    {
+        "datetime_brutto": "2025-01-20 02:01:01",
+        "datetime_tara": "2025-01-20 02:22:00",
+        "nomer_ts": null,
+        "marka_ts": "Скания",
+        "firma_pol": null,
+        "brutto": 20000.0,
+        "tara": 10000.0,
+        "netto": 10000.0,
+        "gruz_name": "ТКО"
+    },
+    {
+        "datetime_brutto": "2025-01-20 02:02:00",
+        "datetime_tara": "2025-01-20 02:03:00",
+        "nomer_ts": "r567j56",
+        "marka_ts": "Белаз",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 20000.0,
+        "tara": 10000.0,
+        "netto": 10000.0,
+        "gruz_name": "ТКО"
+    },
+    {
+        "datetime_brutto": "2025-01-20 15:01:00",
+        "datetime_tara": "2025-01-20 15:20:00",
+        "nomer_ts": "я345не56",
+        "marka_ts": "ВАЗ",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 10000.0,
+        "tara": 8000.0,
+        "netto": 2000.0,
+        "gruz_name": "КГО"
+    },
+    {
+        "datetime_brutto": "2025-01-20 15:02:00",
+        "datetime_tara": "2025-01-20 15:20:00",
+        "nomer_ts": "я245не56",
+        "marka_ts": "Краз",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 10000.0,
+        "tara": 8000.0,
+        "netto": 2000.0,
+        "gruz_name": "РСО"
+    },
+    {
+        "datetime_brutto": "2025-01-20 15:04:00",
+        "datetime_tara": "2025-01-20 15:25:00",
+        "nomer_ts": "я445не56",
+        "marka_ts": "ЛУАЗ",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 10000.0,
+        "tara": 8000.0,
+        "netto": 2000.0,
+        "gruz_name": "ТКО"
+    },
+    {
+        "datetime_brutto": "2025-01-20 15:03:00",
+        "datetime_tara": "2025-01-20 15:20:00",
+        "nomer_ts": "я145не56",
+        "marka_ts": "Маз",
+        "firma_pol": "ООО \"Природа\"",
+        "brutto": 10000.0,
+        "tara": 8000.0,
+        "netto": 2000.0,
+        "gruz_name": "КГО"
+    }
+]

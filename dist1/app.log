@@ -1,0 +1,114 @@
+2025-03-29 09:30:14,734 - INFO -  * Restarting with stat
+2025-03-29 09:30:21,150 - WARNING -  * Debugger is active!
+2025-03-29 09:30:21,150 - INFO -  * Debugger PIN: 241-100-888
+2025-03-29 09:30:21,267 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-29 09:30:26,233 - INFO - 127.0.0.1 - - [29/Mar/2025 09:30:26] "GET /shutdown HTTP/1.1" 200 -
+2025-03-29 09:31:04,867 - INFO -  * Restarting with stat
+2025-03-29 09:31:13,682 - WARNING -  * Debugger is active!
+2025-03-29 09:31:13,686 - INFO -  * Debugger PIN: 761-030-600
+2025-03-29 09:31:13,803 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-29 09:31:14,288 - INFO - 127.0.0.1 - - [29/Mar/2025 09:31:14] "GET /shutdown HTTP/1.1" 200 -
+2025-03-29 09:31:31,284 - INFO -  * Restarting with stat
+2025-03-29 09:31:40,398 - WARNING -  * Debugger is active!
+2025-03-29 09:31:40,402 - INFO -  * Debugger PIN: 563-451-294
+2025-03-29 09:31:40,531 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-29 09:31:40,846 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 09:31:40,861 - INFO - 127.0.0.1 - - [29/Mar/2025 09:31:40] "GET / HTTP/1.1" 200 -
+2025-03-29 09:31:40,954 - INFO - 127.0.0.1 - - [29/Mar/2025 09:31:40] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-29 09:31:40,956 - INFO - 127.0.0.1 - - [29/Mar/2025 09:31:40] "GET /static/style.css HTTP/1.1" 200 -
+2025-03-29 09:31:41,041 - INFO - 127.0.0.1 - - [29/Mar/2025 09:31:41] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-29 09:33:22,852 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 09:33:22,865 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:22] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 09:33:22,876 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:33:22,876 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:33:22,876 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:33:27,667 - INFO - Data successfully sent to REO service for object dbdaaac9-1c07-4eda-ad43-29f544570309
+2025-03-29 09:33:27,667 - INFO - Creating data for object 2...
+2025-03-29 09:33:27,667 - INFO - Created new weight control for object 2: У707СА56
+2025-03-29 09:33:27,667 - INFO - Successfully created 1 records for object 2
+2025-03-29 09:33:27,667 - INFO - Created 1 records for object 2
+2025-03-29 09:33:27,667 - INFO - Saved object 2 data to temp_additional.json
+2025-03-29 09:33:27,667 - INFO - Sending data for object 2...
+2025-03-29 09:33:28,467 - INFO - Data successfully sent to REO service for object 93009fd0-af73-48b2-af31-046e36a29b69
+2025-03-29 09:33:28,467 - INFO - Successfully sent data for object 2
+2025-03-29 09:33:28,467 - INFO - Updating database for object 2 with uid: 48f92149-fc52-4081-8379-120b4cc5aa1f
+2025-03-29 09:33:28,467 - INFO - Inserted auto_uid record for object 2: fbd20fc1-9558-4380-8bd8-ea31fb62d5d7
+2025-03-29 09:33:28,467 - INFO - Inserted reo_data record for object 2: fbd20fc1-9558-4380-8bd8-ea31fb62d5d7
+2025-03-29 09:33:28,467 - INFO - Inserted new_auto_go record for object 2: У707СА56
+2025-03-29 09:33:28,501 - INFO - All data successfully sent and saved to database
+2025-03-29 09:33:28,502 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:28] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-29 09:33:31,143 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 09:33:31,145 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:31] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 09:33:31,154 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:33:31,154 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:33:31,154 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:33:39,202 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:39] "GET /settings HTTP/1.1" 200 -
+2025-03-29 09:33:39,202 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:33:39,202 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:33:50,951 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:50] "POST /check_db_connection HTTP/1.1" 200 -
+2025-03-29 09:33:53,370 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:53] "POST /check_reo_connection HTTP/1.1" 200 -
+2025-03-29 09:33:55,437 - INFO - Settings saved successfully
+2025-03-29 09:33:55,437 - INFO - 127.0.0.1 - - [29/Mar/2025 09:33:55] "POST /save_settings HTTP/1.1" 200 -
+2025-03-29 09:34:04,073 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:04] "[33mGET /save_to_json?date=undefined HTTP/1.1[0m" 404 -
+2025-03-29 09:34:14,756 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:14] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-29 09:34:14,767 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:34:14,768 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:34:24,385 - INFO - Added new cargo type: 1
+2025-03-29 09:34:24,385 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:24] "POST /cargo_types/add HTTP/1.1" 200 -
+2025-03-29 09:34:26,003 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:26] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-29 09:34:26,023 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:34:26,023 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:34:32,100 - INFO - Settings saved successfully
+2025-03-29 09:34:32,100 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:32] "POST /save_settings HTTP/1.1" 200 -
+2025-03-29 09:34:34,398 - INFO - Updated cargo type: 1 -> 12
+2025-03-29 09:34:34,399 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:34] "POST /cargo_types/edit HTTP/1.1" 200 -
+2025-03-29 09:34:34,802 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:34] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-29 09:34:34,818 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:34:34,819 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:34:37,898 - INFO - Deleted cargo type: 12
+2025-03-29 09:34:37,899 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:37] "POST /cargo_types/delete HTTP/1.1" 200 -
+2025-03-29 09:34:39,999 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:39] "GET /cargo_types HTTP/1.1" 200 -
+2025-03-29 09:34:40,013 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:34:40,014 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:34:43,803 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:43] "GET /companies HTTP/1.1" 200 -
+2025-03-29 09:34:43,824 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:34:43,824 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:34:51,568 - INFO - Added new company: ООО "Саночистка"24
+2025-03-29 09:34:51,568 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:51] "POST /companies/add HTTP/1.1" 200 -
+2025-03-29 09:34:52,025 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:52] "GET /companies HTTP/1.1" 200 -
+2025-03-29 09:34:52,041 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:34:52,041 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:34:58,718 - INFO - Updated company: ООО "Саночистка"24 -> ООО "Саночистка"243
+2025-03-29 09:34:58,718 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:58] "POST /companies/edit HTTP/1.1" 200 -
+2025-03-29 09:34:59,392 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:59] "GET /companies HTTP/1.1" 200 -
+2025-03-29 09:34:59,409 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:34:59,410 - INFO - 127.0.0.1 - - [29/Mar/2025 09:34:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:35:08,518 - INFO - Deleted company: ООО "Саночистка"243
+2025-03-29 09:35:08,519 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:08] "POST /companies/delete HTTP/1.1" 200 -
+2025-03-29 09:35:09,305 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:09] "GET /companies HTTP/1.1" 200 -
+2025-03-29 09:35:09,319 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:35:09,320 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:35:12,664 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:12] "GET /auto HTTP/1.1" 200 -
+2025-03-29 09:35:12,676 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:35:12,677 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:35:21,351 - INFO - Added new auto: У707СА560001
+2025-03-29 09:35:21,351 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:21] "POST /auto/add HTTP/1.1" 200 -
+2025-03-29 09:35:21,954 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:21] "GET /auto HTTP/1.1" 200 -
+2025-03-29 09:35:21,967 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:35:21,968 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:35:28,568 - INFO - Updated auto: У707СА560001 -> У707СА5600013
+2025-03-29 09:35:28,568 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:28] "POST /auto/edit HTTP/1.1" 200 -
+2025-03-29 09:35:29,025 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:29] "GET /auto HTTP/1.1" 200 -
+2025-03-29 09:35:29,042 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:35:29,042 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:35:31,468 - INFO - Deleted auto: У707СА5600013
+2025-03-29 09:35:31,468 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:31] "POST /auto/delete HTTP/1.1" 200 -
+2025-03-29 09:35:32,526 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:32] "GET /auto HTTP/1.1" 200 -
+2025-03-29 09:35:32,540 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:35:32,540 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:35:47,594 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 09:35:47,596 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:47] "GET / HTTP/1.1" 200 -
+2025-03-29 09:35:47,604 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:35:47,604 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:35:47,604 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:35:53,666 - INFO - 127.0.0.1 - - [29/Mar/2025 09:35:53] "GET /shutdown HTTP/1.1" 200 -

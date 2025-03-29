@@ -49,12 +49,47 @@
 
 /* Navbar customization */
 .navbar {
-    padding: 0.5rem 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0;
+    min-height: 40px;
 }
 
 .navbar-brand {
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 8px 16px;
+    margin: 0;
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.navbar .nav-link {
+    padding: 8px 16px;
+    color: #000;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border-radius: 0;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown-item {
+    padding: 8px 16px;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #f8f9fa;
 }
 
 /* Button customization */
@@ -62,6 +97,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    margin: 0 5px;
 }
 
 .btn i {
@@ -70,10 +106,25 @@
 
 /* Date controls */
 .date-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.date-controls .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.date-controls .btn-light {
     background-color: #f8f9fa;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+}
+
+.date-controls .btn-primary {
+    background-color: #0d6efd;
 }
 
 /* Input group customization */
@@ -84,4 +135,144 @@
 #datePicker {
     text-align: center;
     background-color: white;
+    width: 150px;
+}
+
+/* Container customization */
+.container-fluid {
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* Table container */
+.table-container {
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 12px;
+    font-weight: 500;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    white-space: nowrap;
+}
+
+.table tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Selected row */
+tr.selected {
+    background-color: #e2e6ea !important;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Header */
+.header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.header h1 {
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+/* Form control */
+.form-control.date-input {
+    width: 120px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+/* Status cell */
+.status-cell {
+    color: #198754;  /* Ready to send color */
+}
+
+.status-cell:contains('Отправлено') {
+    color: #0d6efd;  /* Sent color */
+}
+
+.status-cell:contains('Ошибка') {
+    color: #dc3545;  /* Error color */
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+    color: white;
+    padding: 8px 16px;
+}
+
+/* Mobile menu styles */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 56px;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .dropdown-menu {
+        border: none;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0.5rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
 } 

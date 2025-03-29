@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Региональный экологический оператор 0.15</title>
+    <title>Региональный экологический оператор 0.17</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">РЭО 0.15</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid px-2">
+            <a href="/" class="navbar-brand me-4">РЭО 0.17</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="fileDropdown" role="button" data-bs-toggle="dropdown">
                             Файл
@@ -24,7 +27,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url_for('settings') }}">Настройки</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" onclick="window.close()">Закрыть</a></li>
+                            <li><a class="dropdown-item" href="#" id="closeApp">Закрыть</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -33,7 +36,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" id="sendToREO">Отправить данные в РЭО</a></li>
-                            <li><a class="dropdown-item" href="#" id="saveToJSON">Сохранить данные в файл JSON</a></li>
+                            <li><button class="dropdown-item" type="button" id="saveToJSON" style="width: 100%; text-align: left; border: none; background: none;">Сохранить данные в файл</button></li>
                             <li><a class="dropdown-item" href="#" id="refresh">Обновить</a></li>
                         </ul>
                     </li>
@@ -55,24 +58,68 @@
         </div>
     </nav>
 
-    <div class="container-fluid mt-3">
-        {% block content %}{% endblock %}
-    </div>
+    {% block content %}{% endblock %}
 
     <!-- About Modal -->
     <div class="modal fade" id="aboutModal" tabindex="-1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">О программе</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body">
-                    <p>Программа для отправки данных в Региональный экологический оператор.</p>
-                    <p>Версия 0.15 от 24.03.2025</p>
-                    <p>Лицензия: ООО "Саночистка"</p>
-                    <p>Объект обработки ТКО, г.Бузулук</p>
-                    <p>ПТБО г. Бузулука Оренбургской области.</p>
+                <div class="modal-body" style="max-height: 80vh; overflow-y: auto; padding: 20px;">
+                    <div class="text-center mb-4">
+                        <h4>Программа для отправки данных в Региональный экологический оператор</h4>
+                        <p class="lead">Версия 0.17 от 29.03.2025</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5>Лицензионная информация:</h5>
+                        <p>Лицензия: ООО "Саночистка"</p>
+                        <p>Объект обработки ТКО, г.Бузулук</p>
+                        <p>ПТБО г. Бузулука Оренбургской области</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5>Основные функции:</h5>
+                        <ul>
+                            <li>Получение данных о весах с весового терминала</li>
+                            <li>Формирование и отправка данных в РЭО</li>
+                            <li>Управление списками транспортных средств</li>
+                            <li>Управление списками компаний-отправителей</li>
+                            <li>Управление типами грузов</li>
+                            <li>Настройка параметров подключения</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5>Системные требования:</h5>
+                        <ul>
+                            <li>Операционная система: Windows 10/11</li>
+                            <li>Подключение к интернету</li>
+                            <li>Доступ к базе данных весового терминала</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h5 class="alert-heading">Ограничения использования:</h5>
+                        <ul class="mb-0">
+                            <li><strong>ЗАПРЕЩЕНО использование программы в коммерческих целях без согласования с автором</strong></li>
+                            <li><strong>ЗАПРЕЩЕНО распространение программы в коммерческих целях без согласования с автором</strong></li>
+                            <li><strong>ЗАПРЕЩЕНО любое изменение, адаптирование, перевод, дизассемблирование данной программы</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <h5 class="alert-heading">Отказ от ответственности:</h5>
+                        <p class="mb-0">Поставляется "КАК ЕСТЬ", то есть автор не дает никаких гарантий работоспособности программы, а также не несёт никакой ответственности за любой прямой, косвенный или иной ущерб, понесенный в результате её использования.</p>
+                        <p class="mb-0">Вы используете это ПО на свой страх и риск.</p>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <p class="text-muted">© 2025 ООО "Саночистка". Все права защищены.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,5 +128,91 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        // Обработка меню "Сохранить данные в файл"
+        document.getElementById('saveToJSON').addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            try {
+                const selectedRows = document.querySelectorAll('tr.selected');
+                if (selectedRows.length === 0) {
+                    alert('Пожалуйста, выберите записи для сохранения');
+                    return;
+                }
+
+                const data = Array.from(selectedRows).map(row => {
+                    const cells = row.querySelectorAll('td');
+                    return {
+                        datetime_brutto: cells[0].textContent,
+                        datetime_tara: cells[1].textContent,
+                        nomer_ts: cells[2].textContent,
+                        marka_ts: cells[3].textContent,
+                        firma_pol: cells[4].textContent,
+                        brutto: parseFloat(cells[5].textContent),
+                        tara: parseFloat(cells[6].textContent),
+                        netto: parseFloat(cells[7].textContent),
+                        gruz_name: cells[8].textContent,
+                        inn: cells[9].textContent,
+                        kpp: cells[10].textContent,
+                        status: cells[11].textContent,
+                        date_sent: cells[12].textContent
+                    };
+                });
+
+                const currentDate = document.getElementById('datePicker').value;
+                const filename = `data_${currentDate}.json`;
+                
+                // Создаем текстовое содержимое файла
+                const content = JSON.stringify(data, null, 4);
+                const blob = new Blob([content], { type: 'application/json;charset=utf-8' });
+                
+                // Создаем ссылку для скачивания
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = window.URL.createObjectURL(blob);
+                a.download = filename;
+                
+                // Добавляем ссылку в документ и кликаем по ней
+                document.body.appendChild(a);
+                a.click();
+                
+                // Удаляем ссылку и освобождаем URL
+                window.URL.revokeObjectURL(a.href);
+                document.body.removeChild(a);
+            } catch (error) {
+                console.error('Ошибка при сохранении файла:', error);
+                alert('Произошла ошибка при сохранении файла');
+            }
+        });
+
+        // Обработка кнопки обновления
+        document.getElementById('refresh').addEventListener('click', function() {
+            window.location.reload();
+        });
+
+        // Обработка кнопки закрытия
+        document.getElementById('closeApp').addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Отправляем запрос на выключение сервера
+            fetch('/shutdown', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Если сервер успешно выключился, перенаправляем на главную страницу
+                    window.location.href = '/';
+                } else {
+                    console.error('Ошибка при выключении сервера');
+                }
+            }).catch(error => {
+                console.error('Ошибка при выключении сервера:', error);
+            });
+        });
+    </script>
 </body>
 </html> 

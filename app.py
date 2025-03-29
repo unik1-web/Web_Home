@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, send_file
 import sqlite3
 import json
 import logging
@@ -825,6 +825,19 @@ def check_reo_connection():
     except Exception as e:
         logger.error(f"Error checking REO connection: {e}")
         return jsonify({'status': 'error', 'message': str(e)})
+
+@app.route('/shutdown')
+def shutdown():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    # Запускаем выключение сервера в отдельном потоке
+    import threading
+    def shutdown_server():
+        func()
+    threading.Thread(target=shutdown_server).start()
+    # Перенаправляем на главную страницу
+    return '<script>window.location.href = "/";</script>'
 
 if __name__ == '__main__':
     app.run(debug=True) 

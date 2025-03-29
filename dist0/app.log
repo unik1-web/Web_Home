@@ -1,0 +1,132 @@
+2025-03-29 08:45:54,068 - INFO - Database not found. Initializing...
+2025-03-29 08:45:54,321 - INFO - Added default transport data to list_auto table
+2025-03-29 08:45:54,321 - INFO - Added default cargo types to list_cargotypes table
+2025-03-29 08:45:54,321 - INFO - Added default companies to list_companies table
+2025-03-29 08:45:54,352 - INFO - Database initialized successfully
+2025-03-29 08:45:54,352 - INFO - Database initialized successfully
+2025-03-29 08:45:54,368 - INFO -  * Restarting with stat
+2025-03-29 08:46:02,861 - WARNING -  * Debugger is active!
+2025-03-29 08:46:02,862 - INFO -  * Debugger PIN: 935-175-694
+2025-03-29 08:46:02,986 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-29 08:46:13,141 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:13] "GET /auto HTTP/1.1" 200 -
+2025-03-29 08:46:13,239 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:13] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-29 08:46:13,246 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:13] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-29 08:46:17,286 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 08:46:17,304 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:17] "GET / HTTP/1.1" 200 -
+2025-03-29 08:46:17,319 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:46:17,321 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:46:17,322 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:17] "GET /static/style.css HTTP/1.1" 200 -
+2025-03-29 08:46:25,941 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 08:46:25,943 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:25] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 08:46:25,964 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:46:25,964 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:46:25,969 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:46:30,838 - ERROR - Missing required configuration parameters
+2025-03-29 08:46:30,838 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:30] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-29 08:46:41,071 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:41] "GET /settings HTTP/1.1" 200 -
+2025-03-29 08:46:41,088 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:46:41,089 - INFO - 127.0.0.1 - - [29/Mar/2025 08:46:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:47:06,069 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 08:47:06,071 - INFO - 127.0.0.1 - - [29/Mar/2025 08:47:06] "GET / HTTP/1.1" 200 -
+2025-03-29 08:47:06,085 - INFO - 127.0.0.1 - - [29/Mar/2025 08:47:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:47:06,088 - INFO - 127.0.0.1 - - [29/Mar/2025 08:47:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:47:06,090 - INFO - 127.0.0.1 - - [29/Mar/2025 08:47:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:48:02,985 - INFO -  * Restarting with stat
+2025-03-29 08:48:11,115 - WARNING -  * Debugger is active!
+2025-03-29 08:48:11,119 - INFO -  * Debugger PIN: 654-217-937
+2025-03-29 08:48:11,236 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-29 08:48:23,802 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 08:48:23,827 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:23] "GET / HTTP/1.1" 200 -
+2025-03-29 08:48:23,937 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:23] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-29 08:48:23,937 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:23] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-29 08:48:23,937 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:23] "GET /static/style.css HTTP/1.1" 200 -
+2025-03-29 08:48:37,803 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 08:48:37,805 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:37] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 08:48:37,817 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:48:37,819 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:48:37,820 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:48:42,735 - INFO - Data successfully sent to REO service for object dbdaaac9-1c07-4eda-ad43-29f544570309
+2025-03-29 08:48:42,735 - INFO - Creating data for object 2...
+2025-03-29 08:48:42,749 - INFO - Created new weight control for object 2: У707СА56
+2025-03-29 08:48:42,749 - INFO - Successfully created 1 records for object 2
+2025-03-29 08:48:42,751 - INFO - Created 1 records for object 2
+2025-03-29 08:48:42,752 - INFO - Saved object 2 data to temp_additional.json
+2025-03-29 08:48:42,752 - INFO - Sending data for object 2...
+2025-03-29 08:48:43,719 - INFO - Data successfully sent to REO service for object 93009fd0-af73-48b2-af31-046e36a29b69
+2025-03-29 08:48:43,719 - INFO - Successfully sent data for object 2
+2025-03-29 08:48:43,719 - INFO - Updating database for object 2 with uid: eb010644-64c4-4a4a-bc3d-91ca9700745f
+2025-03-29 08:48:43,719 - INFO - Inserted auto_uid record for object 2: c8b5937d-a3d9-47b5-81e0-cc93ae5c9701
+2025-03-29 08:48:43,719 - INFO - Inserted reo_data record for object 2: c8b5937d-a3d9-47b5-81e0-cc93ae5c9701
+2025-03-29 08:48:43,719 - INFO - Inserted new_auto_go record for object 2: У707СА56
+2025-03-29 08:48:43,752 - INFO - All data successfully sent and saved to database
+2025-03-29 08:48:43,752 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:43] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-29 08:48:48,687 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 08:48:48,687 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:48] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 08:48:48,707 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:48:48,708 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:48:48,709 - INFO - 127.0.0.1 - - [29/Mar/2025 08:48:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:49:06,705 - INFO - 127.0.0.1 - - [29/Mar/2025 08:49:06] "GET /settings HTTP/1.1" 200 -
+2025-03-29 08:49:06,722 - INFO - 127.0.0.1 - - [29/Mar/2025 08:49:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:49:06,722 - INFO - 127.0.0.1 - - [29/Mar/2025 08:49:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:49:14,649 - INFO - 127.0.0.1 - - [29/Mar/2025 08:49:14] "POST /check_db_connection HTTP/1.1" 200 -
+2025-03-29 08:49:17,619 - INFO - 127.0.0.1 - - [29/Mar/2025 08:49:17] "POST /check_reo_connection HTTP/1.1" 200 -
+2025-03-29 08:49:20,587 - INFO - Settings saved successfully
+2025-03-29 08:49:20,588 - INFO - 127.0.0.1 - - [29/Mar/2025 08:49:20] "POST /save_settings HTTP/1.1" 200 -
+2025-03-29 08:50:26,248 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 08:50:26,253 - INFO - 127.0.0.1 - - [29/Mar/2025 08:50:26] "GET / HTTP/1.1" 200 -
+2025-03-29 08:50:26,255 - INFO - 127.0.0.1 - - [29/Mar/2025 08:50:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:50:26,270 - INFO - 127.0.0.1 - - [29/Mar/2025 08:50:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:50:26,271 - INFO - 127.0.0.1 - - [29/Mar/2025 08:50:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:48,032 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 08:55:48,033 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:48] "GET / HTTP/1.1" 200 -
+2025-03-29 08:55:48,033 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:48,033 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:48,033 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:55:52,016 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 08:55:52,033 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:52] "GET / HTTP/1.1" 200 -
+2025-03-29 08:55:52,034 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:52,034 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:52,034 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:55:54,297 - INFO - Data successfully loaded from database for date: 2025-03-28
+2025-03-29 08:55:54,300 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "GET /?date=2025-03-28 HTTP/1.1" 200 -
+2025-03-29 08:55:54,304 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:54,304 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:54,304 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:55:54,933 - INFO - Data successfully loaded from database for date: 2025-03-27
+2025-03-29 08:55:54,935 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "GET /?date=2025-03-27 HTTP/1.1" 200 -
+2025-03-29 08:55:54,945 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:54,946 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 08:55:54,947 - INFO - 127.0.0.1 - - [29/Mar/2025 08:55:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 08:57:35,808 - INFO -  * Restarting with stat
+2025-03-29 08:57:44,532 - WARNING -  * Debugger is active!
+2025-03-29 08:57:44,532 - INFO -  * Debugger PIN: 122-823-291
+2025-03-29 08:57:44,641 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-29 08:58:54,026 - INFO - 127.0.0.1 - - [29/Mar/2025 08:58:54] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-29 08:58:54,027 - INFO - 127.0.0.1 - - [29/Mar/2025 08:58:54] "GET /static/style.css HTTP/1.1" 200 -
+2025-03-29 09:00:02,567 - INFO - 127.0.0.1 - - [29/Mar/2025 09:00:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-29 09:07:58,241 - INFO - 127.0.0.1 - - [29/Mar/2025 09:07:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:07:58,241 - INFO - 127.0.0.1 - - [29/Mar/2025 09:07:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:07:58,316 - INFO - Data successfully loaded from database for date: 2025-03-27
+2025-03-29 09:07:58,333 - INFO - 127.0.0.1 - - [29/Mar/2025 09:07:58] "GET /?date=2025-03-27 HTTP/1.1" 200 -
+2025-03-29 09:08:10,614 - INFO - Data successfully loaded from database for date: 2025-03-27
+2025-03-29 09:08:10,616 - INFO - 127.0.0.1 - - [29/Mar/2025 09:08:10] "GET /?date=2025-03-27 HTTP/1.1" 200 -
+2025-03-29 09:08:10,628 - INFO - 127.0.0.1 - - [29/Mar/2025 09:08:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:08:10,630 - INFO - 127.0.0.1 - - [29/Mar/2025 09:08:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:08:10,631 - INFO - 127.0.0.1 - - [29/Mar/2025 09:08:10] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-29 09:15:55,735 - INFO - Data successfully loaded from database for date: 2025-03-27
+2025-03-29 09:15:55,737 - INFO - 127.0.0.1 - - [29/Mar/2025 09:15:55] "GET /?date=2025-03-27 HTTP/1.1" 200 -
+2025-03-29 09:15:55,752 - INFO - 127.0.0.1 - - [29/Mar/2025 09:15:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:15:55,753 - INFO - 127.0.0.1 - - [29/Mar/2025 09:15:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:15:55,757 - INFO - 127.0.0.1 - - [29/Mar/2025 09:15:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:16:00,620 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 09:16:00,623 - INFO - 127.0.0.1 - - [29/Mar/2025 09:16:00] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 09:16:00,685 - INFO - 127.0.0.1 - - [29/Mar/2025 09:16:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:16:00,685 - INFO - 127.0.0.1 - - [29/Mar/2025 09:16:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:16:00,686 - INFO - 127.0.0.1 - - [29/Mar/2025 09:16:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:18:31,849 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 09:18:31,849 - INFO - 127.0.0.1 - - [29/Mar/2025 09:18:31] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 09:18:31,877 - INFO - 127.0.0.1 - - [29/Mar/2025 09:18:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:18:31,877 - INFO - 127.0.0.1 - - [29/Mar/2025 09:18:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:18:31,881 - INFO - 127.0.0.1 - - [29/Mar/2025 09:18:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 09:20:55,592 - INFO - 127.0.0.1 - - [29/Mar/2025 09:20:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 09:20:55,592 - INFO - 127.0.0.1 - - [29/Mar/2025 09:20:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

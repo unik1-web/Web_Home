@@ -1,139 +1,125 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Региональный экологический оператор</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Региональный экологический оператор</h1>
-            <div class="date-controls">
-                <a href="?date={{ prev_date }}" class="btn">Назад</a>
-                <input type="text" id="datePicker" class="date-input" value="{{ current_date }}" readonly>
-                <a href="?date={{ next_date }}" class="btn">Вперед</a>
-                <a href="?date={{ current_date }}" class="btn">Обновить</a>
-            </div>
-        </div>
-
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Дата провески брутто</th>
-                        <th>Дата провески тары</th>
-                        <th>№ авто</th>
-                        <th>Марка авто</th>
-                        <th>Отправитель</th>
-                        <th>Брутто</th>
-                        <th>Тара</th>
-                        <th>Нетто</th>
-                        <th>Род груза</th>
-                        <th>ИНН</th>
-                        <th>КПП</th>
-                        <th>Статус отправки</th>
-                        <th>Дата отправки</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for row in data %}
-                    <tr>
-                        <td>{{ row[0] }}</td>
-                        <td>{{ row[1] }}</td>
-                        <td>{{ row[2] }}</td>
-                        <td>{{ row[3] }}</td>
-                        <td>{{ row[4] }}</td>
-                        <td>{{ row[5] }}</td>
-                        <td>{{ row[6] }}</td>
-                        <td>{{ row[7] }}</td>
-                        <td>{{ row[8] }}</td>
-                        <td>{{ row[9] }}</td>
-                        <td>{{ row[10] }}</td>
-                        <td>{{ row[11] }}</td>
-                        <td>{{ row[12] }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-
-        <div class="footer">
-            <button id="sendBtn" class="btn">Отправить в РЭО</button>
+<div class="container-fluid">
+    <div class="header">
+        <h1>Региональный экологический оператор</h1>
+        <div class="date-controls">
+            <button onclick="window.location.href='?date={{ prev_date }}'" class="btn btn-light">Назад</button>
+            <input type="text" id="datePicker" name="datePicker" class="form-control date-input" value="{{ current_date }}" readonly>
+            <button onclick="window.location.href='?date={{ next_date }}'" class="btn btn-light">Вперед</button>
+            <button onclick="window.location.href='?date={{ current_date }}'" class="btn btn-primary">Обновить</button>
         </div>
     </div>
 
-    <script>
-        // Инициализация календаря
-        flatpickr("#datePicker", {
-            locale: "ru",
-            dateFormat: "Y-m-d",
-            onChange: function(selectedDates, dateStr) {
-                window.location.href = "?date=" + dateStr;
+    <div class="table-container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Дата провески брутто</th>
+                    <th>Дата провески тары</th>
+                    <th>№ авто</th>
+                    <th>Марка авто</th>
+                    <th>Отправитель</th>
+                    <th>Брутто</th>
+                    <th>Тара</th>
+                    <th>Нетто</th>
+                    <th>Род груза</th>
+                    <th>ИНН</th>
+                    <th>КПП</th>
+                    <th>Статус отправки</th>
+                    <th>Дата отправки</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td class="text-end">{{ row[5] }}</td>
+                    <td class="text-end">{{ row[6] }}</td>
+                    <td class="text-end">{{ row[7] }}</td>
+                    <td>{{ row[8] }}</td>
+                    <td>{{ row[9] }}</td>
+                    <td>{{ row[10] }}</td>
+                    <td class="status-cell">{{ row[11] }}</td>
+                    <td>{{ row[12] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <button id="sendBtn" class="btn btn-success">Отправить в РЭО</button>
+    </div>
+</div>
+
+<script>
+    // Инициализация календаря
+    flatpickr("#datePicker", {
+        locale: "ru",
+        dateFormat: "Y-m-d",
+        onChange: function(selectedDates, dateStr) {
+            window.location.href = "?date=" + dateStr;
+        }
+    });
+
+    // Обработка выбора строк
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+        row.addEventListener('click', function() {
+            this.classList.toggle('selected');
+        });
+    });
+
+    // Обработка отправки данных
+    document.getElementById('sendBtn').addEventListener('click', function() {
+        const selectedRows = document.querySelectorAll('tr.selected');
+        if (selectedRows.length === 0) {
+            alert('Пожалуйста, выберите записи для отправки');
+            return;
+        }
+
+        const data = Array.from(selectedRows).map(row => {
+            const cells = row.querySelectorAll('td');
+            return {
+                datetimebrutto: cells[0].textContent,
+                datetimetara: cells[1].textContent,
+                nomer_ts: cells[2].textContent,
+                marka_ts: cells[3].textContent,
+                firma_pol: cells[4].textContent,
+                brutto: cells[5].textContent,
+                tara: cells[6].textContent,
+                netto: cells[7].textContent,
+                gruz_name: cells[8].textContent,
+                inn: cells[9].textContent,
+                kpp: cells[10].textContent
+            };
+        });
+
+        fetch('/send_to_reo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                alert('Данные успешно отправлены');
+                location.reload();
+            } else {
+                alert('Ошибка при отправке данных: ' + result.error);
             }
+        })
+        .catch(error => {
+            alert('Ошибка при отправке данных: ' + error);
         });
-
-        // Обработка выбора строк
-        const rows = document.querySelectorAll('tbody tr');
-        rows.forEach(row => {
-            row.addEventListener('click', function() {
-                this.classList.toggle('selected');
-            });
-        });
-
-        // Обработка отправки данных
-        document.getElementById('sendBtn').addEventListener('click', function() {
-            const selectedRows = document.querySelectorAll('tr.selected');
-            if (selectedRows.length === 0) {
-                alert('Пожалуйста, выберите записи для отправки');
-                return;
-            }
-
-            const data = Array.from(selectedRows).map(row => {
-                const cells = row.querySelectorAll('td');
-                return {
-                    datetimebrutto: cells[0].textContent,
-                    datetimetara: cells[1].textContent,
-                    nomer_ts: cells[2].textContent,
-                    marka_ts: cells[3].textContent,
-                    firma_pol: cells[4].textContent,
-                    brutto: cells[5].textContent,
-                    tara: cells[6].textContent,
-                    netto: cells[7].textContent,
-                    gruz_name: cells[8].textContent,
-                    inn: cells[9].textContent,
-                    kpp: cells[10].textContent
-                };
-            });
-
-            fetch('/send_to_reo', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.success) {
-                    alert('Данные успешно отправлены');
-                    location.reload();
-                } else {
-                    alert('Ошибка при отправке данных: ' + result.error);
-                }
-            })
-            .catch(error => {
-                alert('Ошибка при отправке данных: ' + error);
-            });
-        });
-    </script>
-</body>
-</html>
+    });
+</script>
 {% endblock %} 
