@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
+env/
 build/
 develop-eggs/
 dist/
@@ -22,7 +23,6 @@ wheels/
 
 # Virtual Environment
 venv/
-env/
 ENV/
 
 # IDE
@@ -31,13 +31,26 @@ ENV/
 *.swp
 *.swo
 
-# Project specific
+# Logs
 *.log
+logs/
+
+# Local development settings
+.env
+.env.local
+.env.*.local
+
+# Database
 *.sqlite
-*.json
+*.db
+
+# Temporary files
+temp.json
+temp_additional.json
+
+# Project specific
 *.exe
 *.spec
-*.db
 *.gdb
 
 # OS specific
