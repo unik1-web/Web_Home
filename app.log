@@ -1080,3 +1080,41 @@
 2025-03-29 19:44:56,991 - INFO - 127.0.0.1 - - [29/Mar/2025 19:44:56] "GET / HTTP/1.1" 200 -
 2025-03-29 19:44:57,004 - INFO - 127.0.0.1 - - [29/Mar/2025 19:44:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-29 19:44:57,007 - INFO - 127.0.0.1 - - [29/Mar/2025 19:44:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 22:54:25,628 - INFO -  * Restarting with stat
+2025-03-29 22:54:26,256 - WARNING -  * Debugger is active!
+2025-03-29 22:54:26,261 - INFO -  * Debugger PIN: 506-543-514
+2025-03-29 22:54:26,315 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-29 22:54:40,032 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:40] "GET /companies HTTP/1.1" 200 -
+2025-03-29 22:54:40,184 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:40] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-29 22:54:40,186 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:40] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-29 22:54:43,362 - INFO - Data successfully loaded from database for date: 2025-03-29
+2025-03-29 22:54:43,379 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:43] "GET / HTTP/1.1" 200 -
+2025-03-29 22:54:43,470 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 22:54:43,487 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 22:54:49,906 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 22:54:49,910 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:49] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 22:54:50,022 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 22:54:50,022 - INFO - 127.0.0.1 - - [29/Mar/2025 22:54:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 22:55:02,234 - INFO - Data successfully sent to REO service for object dbdaaac9-1c07-4eda-ad43-29f544570309
+2025-03-29 22:55:02,245 - INFO - Creating data for object 2...
+2025-03-29 22:55:02,248 - INFO - Created new weight control for object 2: У707СА56
+2025-03-29 22:55:02,248 - INFO - Successfully created 1 records for object 2
+2025-03-29 22:55:02,248 - INFO - Created 1 records for object 2
+2025-03-29 22:55:02,249 - INFO - Saved object 2 data to temp_additional.json
+2025-03-29 22:55:02,250 - INFO - Sending data for object 2...
+2025-03-29 22:55:03,139 - INFO - Data successfully sent to REO service for object 93009fd0-af73-48b2-af31-046e36a29b69
+2025-03-29 22:55:03,143 - INFO - Successfully sent data for object 2
+2025-03-29 22:55:03,143 - INFO - Updating database for object 2 with uid: 073287b3-39e4-4600-8972-14b2d229b84c
+2025-03-29 22:55:03,143 - INFO - Inserted auto_uid record for object 2: c12efbcc-b581-48cb-8177-126157c043e0
+2025-03-29 22:55:03,144 - INFO - Inserted reo_data record for object 2: c12efbcc-b581-48cb-8177-126157c043e0
+2025-03-29 22:55:03,144 - INFO - Inserted new_auto_go record for object 2: У707СА56
+2025-03-29 22:55:03,168 - INFO - All data successfully sent and saved to database
+2025-03-29 22:55:03,169 - INFO - 127.0.0.1 - - [29/Mar/2025 22:55:03] "POST /send_to_reo HTTP/1.1" 200 -
+2025-03-29 22:55:05,274 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 22:55:05,282 - INFO - 127.0.0.1 - - [29/Mar/2025 22:55:05] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 22:55:05,352 - INFO - 127.0.0.1 - - [29/Mar/2025 22:55:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 22:55:05,366 - INFO - 127.0.0.1 - - [29/Mar/2025 22:55:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-29 22:55:13,045 - INFO - Data successfully loaded from database for date: 2025-01-20
+2025-03-29 22:55:13,051 - INFO - 127.0.0.1 - - [29/Mar/2025 22:55:13] "GET /?date=2025-01-20 HTTP/1.1" 200 -
+2025-03-29 22:55:13,115 - INFO - 127.0.0.1 - - [29/Mar/2025 22:55:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-29 22:55:13,135 - INFO - 127.0.0.1 - - [29/Mar/2025 22:55:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
